@@ -8,7 +8,7 @@ Here's some material for how to branch and merge Repos since there will be a lot
 https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 
 
-I recommend using Github Desktop for easy access to the Repo on your computer :)
+I recommend using Github Desktop and cloning the Repo for easy access. :)
 Also if you are having any issues, or need help with Github or Repo branching, feel free to message me or call (I'll do my IT Helpdesk Voice).
 
 Good luck! 
