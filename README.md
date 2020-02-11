@@ -1,6 +1,7 @@
 # Innovate-HS-Design
 
-Hey All! This is the Git Repo for the Design/Front-End-Dev for the Spring 2020 Innovate HS project! *✧･ﾟ: *✧･ﾟ:Throws Confetti:･ﾟ✧:･ﾟ✧*
+Hey All! This is the Git Repo for the Design/Front-End-Dev for the Spring 2020 Innovate HS project!
+ *✧･ﾟ: *✧･ﾟ:Throws Confetti:･ﾟ✧:･ﾟ✧*
 
 https://clarissaspain.github.io/Innovate-HS-Design/
 
