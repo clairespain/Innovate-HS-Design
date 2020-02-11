@@ -2,6 +2,8 @@
 
 Hey All! This is the Git Repo for the Design/Front-End-Dev for the Spring 2020 Innovate HS project! *✧･ﾟ: *✧･ﾟ:Throws Confetti:･ﾟ✧:･ﾟ✧*
 
+https://clarissaspain.github.io/Innovate-HS-Design/
+
 Here's some material for how to branch and merge Repos since there will be a lot of us on this repo:
 
 *On Github Desktop:*
