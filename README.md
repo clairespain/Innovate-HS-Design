@@ -5,14 +5,28 @@ Hey All! This is the Git Repo for the Design/Front-End-Dev for the Spring 2020 I
 Here's some material for how to branch and merge Repos since there will be a lot of us on this repo:
 
 *On Github Desktop:*
-![](images/branch_ex.png)
-*Then you can write your name or whatever to start your own branch. Then at the end of the week or before class we can merge what we did to the master? That way we're not constantly pulling requests when we try to push commits to the repo.*
+![](img/branch_ex.png)
+*Then you can write your name or whatever to start your own branch. Then at the end of the week or before class we can merge what we did to the Master? That way we're not constantly pulling requests when we try to push commits to the repo.*
 
 Here's some more in depth information about branching and merging:
 https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 
-I recommend using Github Desktop and cloning the Repo for easy access. :)
+I recommend using Github Desktop and cloning the Repo for easy access :)
 Also if you are having any issues, or need help with Github or Repo branching, feel free to message me or call (I'll do my IT Helpdesk Voice).
+
+#### Page Checklist:
+| Pages based on Mockup | Please place x in [] when completed |
+| --------------------- | ----------------------------------- |
+| [] Welcome & Video    | [] Speakers                         |
+| [] Student Info       | [] Food Zoo                         |
+| [] Top 2 Topics       | [] Map                              |
+| [] Top 2 Faculty      | [] Post Conference                  |
+| [] Questions          | [] Feedback (4)                     |
+| [] Complete           |                                     |
+| [] Resources Post     |                                     |
+| [] Schedule           |                                     |
+
+
 
 
 ### Good luck!
