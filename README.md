@@ -18,16 +18,16 @@ I recommend using Github Desktop and cloning the Repo for easy access :)
 Also if you are having any issues, or need help with Github or Repo branching, feel free to message me or call (I'll do my IT Helpdesk Voice).
 
 #### Page Checklist:
-| Pages based on Mockup | Please place x in [] when completed |
-| --------------------- | ----------------------------------- |
-| [] Welcome & Video    | [] Speakers                         |
-| [] Student Info       | [] Food Zoo                         |
-| [] Top 2 Topics       | [] Map                              |
-| [] Top 2 Faculty      | [] Post Conference                  |
-| [] Questions          | [] Feedback (4)                     |
-| [] Complete           |                                     |
-| [] Resources Post     |                                     |
-| [] Schedule           |                                     |
+| Pages based on Mockup     | Please place x in [] when completed |
+| ------------------------- | ----------------------------------- |
+| [] Welcome & Video: Solly | [] Speakers: Miya                   |
+| [] Student Info: John     | [] Food Zoo: Dani                   |
+| [] Top 2 Topics: Austin   | [] Map: Miya                        |
+| [] Top 2 Faculty: Claire  | [] Post Conference: Claire          |
+| [] Questions: John        | [] Feedback (4): Solly              |
+| [] Complete: Austin       |                                     |
+| [] Resources Post: Claire |                                     |
+| [] Schedule: Miya         |                                     |
 
 
 
