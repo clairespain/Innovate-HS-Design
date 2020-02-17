@@ -6,6 +6,10 @@ consolidate all of our code?
 I hope that sounds okay for you guys? Please let me know
 if there is a better system. */
 
+@font-face {
+font-family: Arial, san-serif;
+}
+
 *{
   box-sizing: border-box;
 }
@@ -54,11 +58,31 @@ body, html{
 }
 
 .blocks{
-  background: #70002e;
+  background: rgba(112,	0,	46, 0.9);
+  /* opacity: 0.9; */
   position: relative;
-  height: 100px;
-  width: 100px;
+  height: 130px;
+  width: 130px;
+  /* z-index: 2; */
 
+}
+
+.blocks-icons {
+  height: 30px;
+
+}
+
+.blocks h3 {
+  color: white;
+  font-family: Arial;
+  font-size: 20px;
+}
+
+.background-tiles {
+position: absolute;
+height: 50px;
+/* z-index: -1; */
+/* align-items: center; */
 }
 
 @media (max-width: 600px) {
