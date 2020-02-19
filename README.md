@@ -23,10 +23,10 @@ Also if you are having any issues, or need help with Github or Repo branching, f
 | [] Welcome & Video: Solly | [] Speakers: Miya                   |
 | [] Student Info: John     | [] Food Zoo: Dani                   |
 | [] Top 2 Topics: Austin   | [] Map: Miya                        |
-| [] Top 2 Faculty: Claire  | [] Post Conference: Claire          |
+| [x] Top 2 Faculty: Claire | [] Post Conference: Claire          |
 | [] Questions: John        | [] Feedback (4): Solly              |
 | [] Complete: Austin       |                                     |
-| [] Resources Post: Claire |                                     |
+| [x] Resources Post: Claire|                                     |
 | [] Schedule: Miya         |                                     |
 
 

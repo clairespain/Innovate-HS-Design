@@ -16,9 +16,10 @@ font-family: Arial, san-serif;
 
 body, html{
   background-color: white;
-  margin: 0;
+  margin: auto;
   padding: 0;
 }
+
 /* Resources */
 .header{
   justify-content: center;
@@ -26,6 +27,13 @@ body, html{
   height: 130px;
   /* line-height: 200px; */
 }
+/* .header-white{
+  justify-content: center;
+  /* background: #70002e; */
+  height: 230px;
+  /* line-height: 200px; */
+} */
+
 .header-white-banner{
   margin: 0 auto;
   transform: translateY(200%);
@@ -37,13 +45,32 @@ body, html{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  transform: translateY(-25%);
+
+  /* transform: translateY(-25%); */
   align-self: center;
   justify-content: center;
   align-items: center;
   /* background: #70002e; */
   height: 130px;
 
+}
+.header-white .header-logo{
+  margin-top: 25px;
+  display: block;
+margin-left: 50%;
+margin-right: auto;
+/* width: 50%; */
+}
+
+.title-banner {
+  background: rgba(112,	0,	46, 1);
+  height: 140px;
+}
+.title-banner h2{
+  font-family: Arial;
+  color: white;
+  font-size: 45;
+  margin-left: 30px;
 }
 
 .grid-container {
@@ -58,16 +85,18 @@ body, html{
 }
 
 .blocks{
-  background: rgba(112,	0,	46, 0.9);
+  background: rgba(112,	0,	46, 1);
   /* opacity: 0.9; */
   position: relative;
   height: 130px;
   width: 130px;
   /* z-index: 2; */
-
 }
 
 .blocks-icons {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 55px;
   height: 30px;
 
 }
@@ -76,13 +105,8 @@ body, html{
   color: white;
   font-family: Arial;
   font-size: 20px;
-}
-
-.background-tiles {
-position: absolute;
-height: 50px;
-/* z-index: -1; */
-/* align-items: center; */
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 /* Faculty */
