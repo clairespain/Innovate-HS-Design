@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/myStyle.css">
-    <title></title>
-  </head>
-  <body>
 
-  </body>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/myStyle.css">
+  <script src="../myScript.js"></script>
+  <title>Feedback</title>
+</head>
+
+<body>
+  <img id="mainImage" class="header-logo-post" src="..\img\comments.svg" alt="">
+  <br>
+  <div  class="feedback">
+    <p id="question">What did you like about the day?</p>
+  </div>
+  <br>
+  <textarea id="comment" rows="8" cols="80"></textarea>
+  <br>
+  <!-- feedback page 1 to 2-->
+  <button id="btnsubmit" onclick="fn1();" class="btn center">Next</button>
+<!-- feedback page 2 to 3 -->
+  <button id="btnsubmit2" onclick="fn2();" class="btn center" style="display:none">Next</button>
+<!-- feedback page 4 -->
+<!-- yes -->
+  <button id="btnsubmit3" onclick="fn3();" class="btn center" style="display:none">Yes</button>
+<!-- no -->
+  <button id="btnsubmit4" onclick="fn3();" class="btn center" style="display:none">No</button>
+
+<!-- feedback page 5 -->
+  <button id="btnsubmit5" onclick="fn4();" class="btn center" style="display:none">Next</button>
+
+</body>
 </html>

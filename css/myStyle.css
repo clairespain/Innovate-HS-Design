@@ -5,48 +5,48 @@ consolidate all of our code?
 
 I hope that sounds okay for you guys? Please let me know
 if there is a better system. */
-
 @font-face {
-font-family: Arial, san-serif;
+  font-family: Arial, san-serif;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
-body, html{
+body, html {
   background-color: white;
   margin: auto;
   padding: 0;
+  width: 100%;
+  height: auto;
 }
 
 /* Resources */
-.header{
+.header {
   justify-content: center;
   background: #70002e;
   height: 130px;
   /* line-height: 200px; */
 }
 
-.header-white-banner{
+.header-white-banner {
   margin: 0 auto;
   transform: translateY(200%);
   background: white;
   height: 20px;
 }
-.header-logo{
+
+.header-logo {
   position: absolute;
   display: block;
   margin-left: auto;
   margin-right: auto;
-
   /* transform: translateY(-25%); */
   align-self: center;
   justify-content: center;
   align-items: center;
   /* background: #70002e; */
   height: 130px;
-
 }
 
 .grid-container {
@@ -57,11 +57,10 @@ body, html{
   grid-gap: 10px;
   /* margin: 50px auto;
   justify-content: center; */
-
 }
 
-.blocks{
-  background: rgba(112,	0,	46, 1);
+.blocks {
+  background: rgba(112, 0, 46, 1);
   /* opacity: 0.9; */
   position: relative;
   height: 130px;
@@ -74,7 +73,6 @@ body, html{
   margin-left: 10px;
   margin-top: 55px;
   height: 30px;
-
 }
 
 .blocks h3 {
@@ -86,14 +84,14 @@ body, html{
 }
 
 /* Faculty */
-
-.header-faculty{
+.header-faculty {
   justify-content: center;
   /* background: white; */
   height: 250px;
   /* line-height: 200px; */
 }
-.header-faculty img{
+
+.header-faculty img {
   margin-left: 30px;
   margin-right: 30px;
   height: 214.77px;
@@ -106,6 +104,7 @@ body, html{
   font-family: Arial;
   font-size: 14px;
 }
+
 .faculty .info p {
   margin-right: 40px;
   margin-left: 40px;
@@ -113,6 +112,7 @@ body, html{
   font-family: Arial;
   font-size: 14px;
 }
+
 .faculty h3 {
   margin-left: 40px;
   margin-right: 40px;
@@ -121,6 +121,7 @@ body, html{
   font-size: 16px;
   text-decoration: underline;
 }
+
 .faculty h4 {
   margin-left: 30px;
   margin-right: 40px;
@@ -128,6 +129,7 @@ body, html{
   font-family: Arial;
   font-size: 14px;
 }
+
 /* Customize the label (the container) */
 .container {
   display: block;
@@ -162,10 +164,12 @@ body, html{
   background-color: #eee;
   border: 2px solid #70002e;
 }
-.container:hover input ~ .checkmark {
+
+.container:hover input~.checkmark {
   background-color: #ccc;
 }
-.container input:checked ~ .checkmark {
+
+.container input:checked~.checkmark {
   background-color: #70002e;
 }
 
@@ -177,7 +181,7 @@ body, html{
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.container input:checked~.checkmark:after {
   display: block;
 }
 
@@ -198,29 +202,81 @@ body, html{
   height: 20px;
   display: inline-block;
 }
+
 /* Post Conference */
-.header-white .header-logo{
+.header-logo-post {
+  height: 200px;
   margin-top: 25px;
   display: block;
-margin-left: 50%;
-margin-right: auto;
-/* width: 50%; */
+  /* margin-left:; */
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* width: 50%; */
 }
 
 .title-banner {
-  background: rgba(112,	0,	46, 1);
-  height: 140px;
+  background: rgba(112, 0, 46, 1);
+  height: 100px;
 }
-.title-banner h2{
+
+.title-banner h2 {
+  text-align: center;
+  padding-top: 35px;
   font-family: Arial;
   color: white;
   font-size: 45;
-  margin-left: 30px;
-  margin-top: 50px;
+}
+
+.posters {
+  width: 100%;
+  height: auto;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Feedback */
+.feedback p {
+  text-align: center;
+  color: #70002e;
+  font-family: Arial;
+  font-size: 14px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+textarea {
+  width: 270px;
+  display: block;
+  border: 2px solid #70002e;
+  resize: none;
+  /* margin-left: 30px;
+  margin-right: 30px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn{
+  background-color: #70002e;
+  width: 100px;
+  border: 1px solid grey;
+  padding: 5px 5px;
+  border-radius: 5px;
+  color: white;
+  font-family: Arial;
+  font-size: 14px;
+
+}
+
+.btn:hover{
+  border-color: black;
 }
 
 
-@media (max-width: 600px) {
-
-
-}
+@media (max-width: 600px) {}
