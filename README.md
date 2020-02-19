@@ -20,14 +20,14 @@ Also if you are having any issues, or need help with Github or Repo branching, f
 #### Page Checklist:
 | Pages based on Mockup               | Please place x in [] when completed |
 | ----------------------------------- | ----------------------------------- |
-| [x] Welcome & Video: Solly & Claire | [] Speakers: Miya                   |
+| [x] Welcome & Video: Solly & Claire | [x] Speakers: Miya                   |
 | [] Student Info: John               | [x] Food Zoo: Claire                |
-| [] Top 2 Topics: Austin             | [] Map: Miya                        |
+| [] Top 2 Topics: Austin             | [tentatively...] Map: Miya                        |
 | [x] Top 2 Faculty: Claire           | [x] Post Conference: Claire         |
 | [] Questions: John                  | [x] Feedback (4): Claire            |
 | [x] Complete                |                                     |
 | [x] Resources Post: Claire          |                                     |
-| [] Schedule: Miya                   |                                     |
+| [x] Schedule: Miya                   |                                     |
 
 
 
