@@ -7,6 +7,7 @@ I hope that sounds okay for you guys? Please let me know
 if there is a better system. */
 @font-face {
   font-family: Arial, san-serif;
+  /* font-weight: bold; */
 }
 
 * {
