@@ -21,6 +21,22 @@ body, html {
   height: auto;
 }
 
+/* welcome page */
+.welcome p{
+  font-family: Arial;
+  color: #707070;
+  font-size: 14px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.welcome-red p{
+  font-family: Arial;
+  color: #70002e;
+  font-size: 14px;
+  margin-left: 25px;
+  margin-right: 20px;
+}
 /* Resources */
 .header {
   justify-content: center;
