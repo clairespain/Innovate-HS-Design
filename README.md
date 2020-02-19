@@ -25,7 +25,7 @@ Also if you are having any issues, or need help with Github or Repo branching, f
 | [] Top 2 Topics: Austin             | [] Map: Miya                        |
 | [x] Top 2 Faculty: Claire           | [x] Post Conference: Claire         |
 | [] Questions: John                  | [x] Feedback (4): Claire            |
-| [] Complete: Austin                 |                                     |
+| [x] Complete                |                                     |
 | [x] Resources Post: Claire          |                                     |
 | [] Schedule: Miya                   |                                     |
 
