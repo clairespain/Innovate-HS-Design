@@ -1,5 +1,22 @@
 # Innovate-HS-Design
 
+Phew, that was exhausting (✖╭╮✖)
+
+| Soft goals for Monday Feb 24th                                   |
+| ---------------------------------------------------------------- |
+| [] Organize files                                                |
+| [] Connect pages with JavaScript                                 |
+| [] Proofread pages                                               |
+| [] Label objects with JS and Json for Data design group          |
+| [] Cry                                                           |
+| [] Look into Gameplay idea, QR Code Camera reader implementation |
+| [] Admin Website?                                                |
+
+
+
+
+
+#### Done Feb 19 2020
 Hey All! This is the Git Repo for the Design/Front-End-Dev for the Spring 2020 Innovate HS project!
  *✧･ﾟ: *✧･ﾟ:Throws Confetti:･ﾟ✧:･ﾟ✧*
 
@@ -20,16 +37,13 @@ Also if you are having any issues, or need help with Github or Repo branching, f
 #### Page Checklist:
 | Pages based on Mockup               | Please place x in [] when completed |
 | ----------------------------------- | ----------------------------------- |
-| [x] Welcome & Video: Solly & Claire | [x] Speakers: Miya                   |
+| [x] Welcome & Video: Solly & Claire | [x] Speakers: Miya                  |
 | [] Student Info: John               | [x] Food Zoo: Claire                |
-| [x] Top 2 Topics: Austin             | [tentatively...] Map: Miya                        |
+| [x] Top 2 Topics: Austin            | [tentatively...] Map: Miya          |
 | [x] Top 2 Faculty: Claire           | [x] Post Conference: Claire         |
-| [] Questions: John                  | [x] Feedback (4): Claire            |
-| [x] Complete                |                                     |
+| [] Questions: John                  | [x] Feedback (5): Claire            |
+| [x] Complete                        |                                     |
 | [x] Resources Post: Claire          |                                     |
-| [x] Schedule: Miya                   |                                     |
-
-
-
+| [x] Schedule: Miya                  |                                     |
 
 ### Good luck!

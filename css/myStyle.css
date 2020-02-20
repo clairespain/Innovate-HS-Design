@@ -291,9 +291,11 @@ textarea {
 
 }
 
-.btn:hover{
+/* .btn:hover{
   border-color: black;
+} */
+
+
+@media (max-width: 600px) {
+
 }
-
-
-@media (max-width: 600px) {}
