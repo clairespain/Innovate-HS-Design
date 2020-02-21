@@ -8,7 +8,7 @@ Phew, that was exhausting (✖╭╮✖)
 | [] Connect pages with JavaScript                                 |
 | [] Proofread pages                                               |
 | [] Label objects with JS and Json for Data design group          |
-| [] Cry                                                           |
+| [X] Cry                                                           |
 | [] Look into Gameplay idea, QR Code Camera reader implementation |
 | [] Admin Website?                                                |
 
