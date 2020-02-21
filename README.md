@@ -38,10 +38,10 @@ Also if you are having any issues, or need help with Github or Repo branching, f
 | Pages based on Mockup               | Please place x in [] when completed |
 | ----------------------------------- | ----------------------------------- |
 | [x] Welcome & Video: Solly & Claire | [x] Speakers: Miya                  |
-| [] Student Info: John               | [x] Food Zoo: Claire                |
+| [x] Student Info: John               | [x] Food Zoo: Claire                |
 | [x] Top 2 Topics: Austin            | [tentatively...] Map: Miya          |
 | [x] Top 2 Faculty: Claire           | [x] Post Conference: Claire         |
-| [] Questions: John                  | [x] Feedback (5): Claire            |
+| [x] Questions: John                  | [x] Feedback (5): Claire            |
 | [x] Complete                        |                                     |
 | [x] Resources Post: Claire          |                                     |
 | [x] Schedule: Miya                  |                                     |
