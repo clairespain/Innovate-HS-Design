@@ -15,35 +15,47 @@
 }
 
 .pagination a.active {
-  color: maroon;
+  color: rgb(112, 0, 46);
 }
+
 #question{
     font-weight: bold;
     font-size: 18px; /* or larger */
     height: 200px; /* or larger */
     width: 400px; /* or larger */
-	border: 2px solid maroon;
+	border: 2px solid rgb(112, 0, 46);
 	border-radius: 5px;
 }
+
 #questionbtn1{
 	width: 200px;
 	height: 100px;
-	background-color: maroon;
+	background-color: rgb(112, 0, 46);
 	color: white;
-	border: 2px solid darkgray; 
+	border: 2px solid rgb(140, 142, 144);
 	border-radius: 12px;
 	font-size: 24px;
 }
+
 #questionbtn2{
 	width: 200px;
 	height: 100px;
-	background-color: maroon;
+	background-color: rgb(112, 0, 46);
 	color: white;
-	border: 2px solid darkgray; 
+	border: 2px solid rgb(140, 142, 144);
 	border-radius: 12px;
 	font-size: 24px;
 }
+
 #h{
-	color: maroon;
+	color: rgb(112, 0, 46);
 }
-.stdInfo{padding:8px;display:block;border:none;border-bottom:1px solid #ccc;width:100%}
+
+.stdInfo{
+  padding:8px;
+  display:block;
+  border:none;
+  border-bottom:1px
+  solid #ccc;
+  width:100%;
+}

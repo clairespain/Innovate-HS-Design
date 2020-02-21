@@ -26,6 +26,22 @@ a{
   text-decoration: none;
 }
 
+i{
+  border: solid rgb(112, 0, 46);
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 30px;
+  margin-top: 11px;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  float: left;
+}
+
 /* welcome page */
 .welcome p{
   font-family: Arial;
