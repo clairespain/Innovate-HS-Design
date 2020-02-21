@@ -4,7 +4,7 @@ Phew, that was exhausting (✖╭╮✖)
 
 | Soft goals for Monday Feb 24th                                   |
 | ---------------------------------------------------------------- |
-| [] Organize files                                                |
+| [X] Organize files                                                |
 | [] Connect pages with JavaScript                                 |
 | [] Proofread pages                                               |
 | [] Label objects with JS and Json for Data design group          |
