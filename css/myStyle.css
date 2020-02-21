@@ -22,6 +22,10 @@ body, html {
   height: auto;
 }
 
+a{
+  text-decoration: none;
+}
+
 /* welcome page */
 .welcome p{
   font-family: Arial;
@@ -86,7 +90,6 @@ body, html {
 }
 
 .blocks-icons {
-  display: flex;
   margin-left: 10px;
   margin-top: 55px;
   height: 30px;
