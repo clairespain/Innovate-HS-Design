@@ -15,7 +15,7 @@
 }
 
 .pagination a.active {
-  color: rgb(112, 0, 46);
+  color: maroon;
 }
 
 #question{
@@ -23,39 +23,33 @@
     font-size: 18px; /* or larger */
     height: 200px; /* or larger */
     width: 400px; /* or larger */
-	border: 2px solid rgb(112, 0, 46);
+	border: 2px solid maroon;
 	border-radius: 5px;
 }
-
 #questionbtn1{
 	width: 200px;
 	height: 100px;
-	background-color: rgb(112, 0, 46);
+	background-color: maroon;
 	color: white;
-	border: 2px solid rgb(140, 142, 144);
+	border: 2px solid darkgray; 
 	border-radius: 12px;
 	font-size: 24px;
 }
-
 #questionbtn2{
 	width: 200px;
 	height: 100px;
-	background-color: rgb(112, 0, 46);
+	background-color: maroon;
 	color: white;
-	border: 2px solid rgb(140, 142, 144);
+	border: 2px solid darkgray; 
 	border-radius: 12px;
 	font-size: 24px;
 }
-
 #h{
-	color: rgb(112, 0, 46);
+	color: maroon;
 }
-
-.stdInfo{
-  padding:8px;
-  display:block;
-  border:none;
-  border-bottom:1px
-  solid #ccc;
-  width:100%;
+.madlibcss{
+	color: darkgray;
+    font-size: 18px;
 }
+.stdmadlib{padding:8px;display:inline;border:none;border-bottom:1px solid maroon; text-align: center}
+.stdInfo{padding:8px;display:block;border:none;border-bottom:1px solid #ccc;width:100%}
