@@ -32,6 +32,7 @@ function fn4(){
   var myQuestion = document.getElementById("question");
   myQuestion.innerHTML = "We thank you for your time spent taking this survey. Your response has been recorded. Click 'Next' to continue.";
   document.getElementById("mainImage").src = "../img/completed.svg";
+  document.getElementById("comment").style.display="none";
   // document.getElementById("btnsubmit2").style.display = "none";
   // document.getElementById("btnsubmit3").style.display = "block";
 }

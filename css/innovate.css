@@ -1,5 +1,11 @@
+body{
+  font-family: arial, sans-serif;
+  color: rgb(140, 142, 144);
+}
+
 label{
   font-family: arial, sans-serif;
+  font-size: 16px;
 }
 
 h2{
@@ -63,7 +69,7 @@ h2{
 
 .madlibcss{
 	color: rgb(140, 142, 144);
-  font-size: 18px;
+  font-size: 16px;
   font-family: arial, sans-serif;
 }
 
