@@ -1,8 +1,18 @@
+label{
+  font-family: arial, sans-serif;
+}
+
+h2{
+  font-family: arial, sans-serif;
+}
+
 .center {
   text-align: center;
 }
+
 .pagination {
   display: inline-block;
+  font-family: arial, sans-serif;
 }
 
 .pagination a {
@@ -15,7 +25,7 @@
 }
 
 .pagination a.active {
-  color: maroon;
+  color: rgb(112, 0, 46);
 }
 
 #question{
@@ -53,7 +63,8 @@
 
 .madlibcss{
 	color: rgb(140, 142, 144);
-    font-size: 18px;
+  font-size: 18px;
+  font-family: arial, sans-serif;
 }
 
 .stdmadlib{
@@ -61,7 +72,8 @@
   display:inline;
   border:none;
   border-bottom:1px solid rgb(112, 0, 46);
-  text-align: center
+  text-align: center;
+  font-family: arial, sans-serif;
 }
 
 .stdInfo{
@@ -69,5 +81,6 @@
   display:block;
   border:none;
   border-bottom:1px solid #ccc;
-  width:100%
+  width:100%;
+  font-family: arial, sans-serif;
 }
