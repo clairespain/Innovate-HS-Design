@@ -4,11 +4,11 @@ Phew, that was exhausting (✖╭╮✖)
 
 | Soft goals for Monday Feb 24th                                   |
 | ---------------------------------------------------------------- |
-| [X] Organize files                                                |
-| [x] Connect pages with JavaScript                                 |
-| [x] Proofread pages                                               |
+| [X] Organize files                                               |
+| [x] Connect pages with JavaScript                                |
+| [x] Proofread pages                                              |
 | [] Label objects with JS and Json for Data design group          |
-| [X] Cry                                                           |
+| [X] Cry                                                          |
 | [] Look into Gameplay idea, QR Code Camera reader implementation |
 | [] Admin Website?                                                |
 
