@@ -1,8 +1,24 @@
+body{
+  font-family: arial, sans-serif;
+  color: rgb(140, 142, 144);
+}
+
+label{
+  font-family: arial, sans-serif;
+  font-size: 16px;
+}
+
+h2{
+  font-family: arial, sans-serif;
+}
+
 .center {
   text-align: center;
 }
+
 .pagination {
   display: inline-block;
+  font-family: arial, sans-serif;
 }
 
 .pagination a {
@@ -11,45 +27,66 @@
   text-decoration: none;
   transition: background-color .3s;
   margin: 0 4px;
-  color: darkgray;
+  color: rgb(140, 142, 144);
 }
 
 .pagination a.active {
-  color: maroon;
+  color: rgb(112, 0, 46);
 }
 
 #question{
-    font-weight: bold;
-    font-size: 18px; /* or larger */
-    height: 200px; /* or larger */
-    width: 400px; /* or larger */
-	border: 2px solid maroon;
+  font-weight: bold;
+  font-size: 18px; /* or larger */
+  height: 200px; /* or larger */
+  width: 400px; /* or larger */
+	border: 2px solid rgb(112, 0, 46);
 	border-radius: 5px;
 }
+
 #questionbtn1{
 	width: 200px;
 	height: 100px;
-	background-color: maroon;
+	background-color: rgb(112, 0, 46);
 	color: white;
-	border: 2px solid darkgray; 
+	border: 2px solid rgb(140, 142, 144);
 	border-radius: 12px;
 	font-size: 24px;
 }
+
 #questionbtn2{
 	width: 200px;
 	height: 100px;
-	background-color: maroon;
+	background-color: rgb(112, 0, 46);
 	color: white;
-	border: 2px solid darkgray; 
+	border: 2px solid rgb(140, 142, 144);
 	border-radius: 12px;
 	font-size: 24px;
 }
+
 #h{
-	color: maroon;
+	color: rgb(112, 0, 46);
 }
+
 .madlibcss{
-	color: darkgray;
-    font-size: 18px;
+	color: rgb(140, 142, 144);
+  font-size: 16px;
+  font-family: arial, sans-serif;
 }
-.stdmadlib{padding:8px;display:inline;border:none;border-bottom:1px solid maroon; text-align: center}
-.stdInfo{padding:8px;display:block;border:none;border-bottom:1px solid #ccc;width:100%}
+
+.stdmadlib{
+  padding:8px;
+  display:inline;
+  border:none;
+  border-bottom:1px solid rgb(112, 0, 46);
+  text-align: center;
+  font-family: arial, sans-serif;
+}
+
+.stdInfo{
+  padding:8px;
+  display:block;
+  border:none;
+  border-bottom:1px solid #ccc;
+  width:100%;
+  font-family: arial, sans-serif;
+}

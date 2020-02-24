@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="../css/innovate.css">
+	</head>
+	<script type = "text/javascript">
+    function sendAndReturn() {
+        $.ajax({
+            url: "https://battleboats.dungeonbuddy.net/WebApp.aspx/testMe",
+            type: 'POST',
+            data: {firstname: document.getElementById("firstname").innerHTML, lastname: document.getElementById("lastname").innerHTML, email: document.getElementById("email").innerHTML, password: document.getElementById("password").innerHTML},
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (serverResponse) {
+                let testPerson = serverResponse.d;
+                alert(testPerson.Name);
+            }
+        });
+
+        return false;
+    }
+
+
+    </script>
+	<body>
+		<div class="center">
+
+<<<<<<< HEAD:pages/studentinfo.html
+			<img src="../img/infoIcon.jpg" alt="info" height="200">
+=======
+			<img src="../img/infoIcon.jpg" alt="info" height="auto" width="300">
+>>>>>>> d8611201737caee5134ad1ecb48f2daab6a27c08:pages/studentInfo.html
+			<h2>Please enter your student information</h2>
+		<form id="registration" runat="server">
+			<label>First Name</label>
+			<input class="stdInfo" type="text" runat = "server" id = "firstname">
+			<br>
+			<label>Last Name</label>
+			<input class="stdInfo" type="text" runat="server" id="lastname">
+			<br>
+			<label>Email</label>
+			<input class="stdInfo" type="text" runat = "server" id="email">
+			<br>
+			<label>Password</label>
+			<input class="stdInfo" type="password" runat = "server" id="password">
+		</form>
+		<br><br>
+
+			<div class="pagination">
+				<a href="#">&laquo;</a>
+				<a href="index.html">o</a>
+				<a href="../pages/studentInfo.html"class="active"> o</a>
+				<a href="../pages/topics.html">o</a>
+				<a href="../pages/faculty.html">o</a>
+				<a href="../pages/questions.html">o</a>
+				<a href="../pages/.html">o</a>
+				<a href="../pages/.html">&raquo;</a>
+			</div>
+		</div>
+
+	</body>
+</html>
