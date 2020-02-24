@@ -107,6 +107,15 @@ i{
   /* z-index: 2; */
 }
 
+.blocks-topics h5 {
+  color: white;
+  font-family: Arial;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 35%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 
 .blocks {
   background: rgba(112, 0, 46, 1);
@@ -128,6 +137,7 @@ i{
   margin-left: 10px;
   margin-top: 10px;
 }
+
 
 /* Faculty */
 .header-faculty {
