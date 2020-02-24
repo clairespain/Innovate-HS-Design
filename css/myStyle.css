@@ -1,10 +1,4 @@
-/* Let's start by having individual css files for each of us
-on our own work. So that we are not building too much into
-one css document. then towards the end we will try to
-consolidate all of our code?
 
-I hope that sounds okay for you guys? Please let me know
-if there is a better system. */
 @font-face {
   font-family: Arial, san-serif;
   /* font-weight: bold; */
@@ -239,6 +233,25 @@ i{
   display: inline-block;
 }
 
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 /* Post Conference */
 .header-logo-post {
   height: 200px;
