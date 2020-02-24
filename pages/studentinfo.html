@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../css/innovate.css">
+	</head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+	<script type = "text/javascript">
+    function sendAndReturn() {
+        $.ajax({
+            url: "https://innovateserver.dungeonbuddy.net/Server.aspx/insertStudent",
+            type: 'POST',
+            data: {firstname: document.getElementById("firstname").innerHTML, lastname: document.getElementById("lastname").innerHTML, email: document.getElementById("email").innerHTML, password: document.getElementById("password").innerHTML, school: null},
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            
+            success: function (serverResponse) {
+                let testStudent = serverResponse.d;
+                alert(testStudent);
+            }
+        });
+		alert("Call made");
+        return false;
+    }
+            
+	function validateForm(){
+		var fn = document.forms["registration"]["firstname"].value;
+		var ln = document.forms["registration"]["lastname"].value;
+		var em = document.forms["registration"]["email"].value;
+		if(em.search("@")==null){
+			alert("Please enter a valid email");
+			return false;
+		}
+		
+		if (fn == "" || ln == ""){
+			alert("Name must be filled out");
+			return false;
+		}
+	} 
+    </script>
+
+	<body>
+		<div class="center">
+		
+			<img src="../img/infoIcon.jpg" alt="info" height="200" width="400">
+			<h2>Please enter your student information</h2>
+		<form id="registration" runat="server" onsubmit = "return validateForm()" method="POST">
+			<label>First Name</label>
+			<input class="stdInfo" type="text" runat = "server" id = "firstname" required>
+			<br>
+			<label>Last Name</label>
+			<input class="stdInfo" type="text" runat="server" id="lastname" required>
+			<br>
+			<label>Email</label>
+			<input class="stdInfo" type="text" runat = "server" id="email" required>
+			<br>
+			<label>Password</label>
+			<input class="stdInfo" type="password" runat = "server" id="password" required>
+			<input type = "submit" value="submit">
+		</form>
+		
+		<br><br>
+			
+			<div class="pagination">
+			<a href="#">&laquo;</a>
+			<a href="index.html">o</a>
+			<a href="../pages/studentInfo.html"class="active"> o</a>
+			<a href="../pages/topics.html"> <a href="javascript:sendAndReturn()"> o</a></a>
+			<a href="../pages/faculty.html">o</a>
+			<a href="../pages/questions.html">o</a>
+			<a href="../pages/.html">o</a>
+			<a href="../pages/.html">&raquo;</a>
+			</div>
+		</div>
+
+	</body>
+</html>
