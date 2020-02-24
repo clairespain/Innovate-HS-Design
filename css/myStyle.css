@@ -331,14 +331,49 @@ textarea {
 
 }
 
-/* Topics */
+/* pagination */
+.pagination-center{
+text-align: center;
+}
+.pagination {
 
+  display: inline-block;
+
+}
+.pagination a {
+  margin:  4px;
+  text-decoration: none;
+
+}
+
+/* .pagination a.active {
+  background-color: #70002e;
+}
+
+.pagination a:hover:not(.active){
+  background-color: grey;
+} */
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: grey;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* .dot.active{
+  background-color: #70002e;
+} */
+
+.dot:hover{
+  background-color: #70002e;
+}
+
+/* .dot:hover:not(.active){
+  background-color: grey;
+} */
 
 /* .btn:hover{
   border-color: black;
 } */
-
-
-@media (max-width: 600px) {
-
-}
