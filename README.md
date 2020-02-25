@@ -1,4 +1,14 @@
-# Innovate-HS-Design
+# Innovate-HS-design
+Soft goals for Wednesday 26th:
+
+Replace pagination with buttons
+ask cassens to compile and check for first page
+Json on those three Pages
+Json for retrieving data? 
+login page after registration?
+Admin Page?
+
+
 
 Phew, that was exhausting (✖╭╮✖)
 
