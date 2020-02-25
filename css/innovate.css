@@ -17,12 +17,10 @@ h2{
 }
 
 .pagination {
-  display: inline-block;
   font-family: arial, sans-serif;
 }
 
 .pagination a {
-  float: left;
   padding: 8px 16px;
   text-decoration: none;
   transition: background-color .3s;

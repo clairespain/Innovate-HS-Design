@@ -36,6 +36,12 @@ i{
   float: left;
 }
 
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  float: right;
+}
+
 /* welcome page */
 .welcome p{
   font-family: Arial;
