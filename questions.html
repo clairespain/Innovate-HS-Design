@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+
+	  <title>InnovateHS Madlib</title>
+
+	  <meta name="author" content="John">
+
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="../css/innovate.css">
+
+		<link rel="stylesheet" href="../css/myStyle.css">
+
+
+	</head>
+
+		<div class="">
+
+			<img class="header-logo-post" src="..\img\innovateHS_transparent.png" alt="">
+
+		</div>
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+	<script type = "text/javascript">
+
+    function sendAndReturn() {
+		var p1 = document.getElementById("problem1").innerHTML.value;
+		var p2 = document.getElementById("problem2").innerHTML.value; 
+		var v1 = document.getElementById("verb1").innerHTML.value; 
+		var v2 = document.getElementById("verb2").innerHTML.value;
+		var adv = document.getElementById("adverb").innerHTML.value;
+        $.ajax({
+
+            url: "https://battleboats.dungeonbuddy.net/WebApp.aspx/testMe",
+
+            type: 'POST',
+
+            data: {problem1: p1, problem2: p2, verb1: v1, verb2: v2, adverb: adv},
+
+            contentType: "application/json; charset=utf-8",
+
+            dataType: "json",
+
+            success: function (serverResponse) {
+
+                let testPerson = serverResponse.d;
+
+                alert(testPerson.Name);
+
+            }
+
+        });
+
+        return false;
+
+    }
+
+	
+    </script>
+
+
+
+	<body>
+
+		<div class="center">
+
+			<img src="../img/questionsImg.jpg" alt="info" height="auto" width="300">
+
+			<h3 class = "madlibcss">To prepare for InnovateHS, we encourage you to start thinking about what innovation means to you and what problems you think need innovative solutions by completing the InnovateHS Mad Lib questions below.</h3>
+
+		<form id="madlib" runat="server">
+
+			<p class = "madlibcss">a. Innovation is necessary right now because of these problems:</p> <br>
+			<input class="stdmadlib" type="text" runat = "server" id = "problem1" required> <p class = "madlibcss"> & </p>
+			<input class="stdmadlib" type="text" runat = "server" id = "problem2" required>
+			<br>
+			<br>
+
+			<p class = "madlibcss">b. Innovation needs people who can: </p> <br>
+
+			<input class="stdmadlib" type="text" runat="server" id="verb1" required>
+			<p class = "madlibcss"> (verb), </p>
+			<input class="stdmadlib" type="text" runat = "server" id="verb2" required>
+			<p class = "madlibcss">(verb),</p>
+			<br><p class = "madlibcss">and do it</p>
+			<input class="stdmadlib" type="password" runat = "server" id="adverb" required>
+			<p class = "madlibcss">(adverb) </p><br>
+		</form>
+
+		<br><br>
+
+		<div class="pagination-center">
+		<div class="pagination" >
+		  <!-- <a href="#">&laquo;</a> -->
+		  <a href="../pages/studentInfo.html"><span class="dot"></span></a>
+		  <a href="../pages/topics.html"><span class="dot"></span></a>
+		  <a href="../pages/faculty.html"><span class="dot"></span></a>
+		  <a href="../pages/questions.html"><span class="dot"></span></a>
+		  <a href="../pages/completeRegistration.html"><span class="dot"></span></a>
+		  <!-- <a href="../pages/.html">&raquo;</a> -->
+		</div>
+		</div>
+
+		</div>
+
+	</body>
+
+</html>
