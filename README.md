@@ -8,12 +8,12 @@ Ask Cassens to compile and check for first page? @
 
 Tuesday Night:
 
-Install and test on Cordova, android and ios.
+Install and test on Cordova, android and ios
 Styling
-Json on those three Pages
+Json on those three Pages: Questions/Topics/Feedback
 
 Wednesday:
-Json for retrieving data on 2 pages
+Json for retrieving data on two pages: Faculty/Schedule
 
 Later:
 Update Welcome page
