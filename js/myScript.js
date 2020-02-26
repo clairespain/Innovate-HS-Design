@@ -39,7 +39,17 @@ function fn4() {
 
 //topics
 
-document.getElementById("Business").innerHTML
+// var myTopic = {
+//   ""
+// }
+//
+// var myFavTopics = ["business", "environment"];
+//
+// var theTopics = [
+//   {},
+//   {},
+//   {}]
+// document.getElementById("Business").innerHTML
 
 
 //Communicating with the server
@@ -71,23 +81,23 @@ document.getElementById("Business").innerHTML
 //
 
 
-$ function(){
-
-$.ajax({
-    type: "POST",
-    url: "url",
-    timeout: 2000,
-    beforeSend: function(){
-      $content.append('div id="load">Loading</div>');
-    },
-    complete: function(data) {
-      $('#loading').remove();
-    },
-    success: function(data) {
-      $content.html( $(data).find('#container')).hide().fadeIn(400);
-    },
-    fail: function() {
-      $('#panel').html('<div class="loading">Please try again soon.</div>');
-    }
-});
-});
+// $ function(){
+//
+// $.ajax({
+//     type: "POST",
+//     url: "url",
+//     timeout: 2000,
+//     beforeSend: function(){
+//       $content.append('div id="load">Loading</div>');
+//     },
+//     complete: function(data) {
+//       $('#loading').remove();
+//     },
+//     success: function(data) {
+//       $content.html( $(data).find('#container')).hide().fadeIn(400);
+//     },
+//     fail: function() {
+//       $('#panel').html('<div class="loading">Please try again soon.</div>');
+//     }
+// });
+// });
