@@ -3,7 +3,6 @@
 
 	<head>
 		<link rel="stylesheet" type="text/css" href="../css/innovate.css">
-	<link rel="stylesheet" href="../css/myStyle.css">
 	</head>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
 	<script type = "text/javascript">
@@ -14,7 +13,7 @@
             data: {firstname: document.getElementById("firstname").innerHTML, lastname: document.getElementById("lastname").innerHTML, email: document.getElementById("email").innerHTML, password: document.getElementById("password").innerHTML, school: null},
             contentType: "application/json; charset=utf-8",
             dataType: "json",
-            
+
             success: function (serverResponse) {
                 let testStudent = serverResponse.d;
                 alert(testStudent);
@@ -23,7 +22,7 @@
 		alert("Call made");
         return false;
     }
-            
+
 	function validateForm(){
 		var fn = document.forms["registration"]["firstname"].value;
 		var ln = document.forms["registration"]["lastname"].value;
@@ -32,18 +31,19 @@
 			alert("Please enter a valid email");
 			return false;
 		}
-		
+
 		if (fn == "" || ln == ""){
 			alert("Name must be filled out");
 			return false;
 		}
-	} 
+	}
     </script>
 	<body>
 		<div class="center">
 
-			<img src="../img/infoIcon.jpg" alt="info" height="auto" width="300"
-			<h2>Please enter your student information</h2>
+			<img src="../img/infoIcon.jpg" alt="info" height="auto" width="300">
+			<p><strong>Please enter your student information</strong></p>
+			<br><br>
 		<form id="registration" runat="server" onsubmit = "return validateForm()" method="POST">
 			<label>First Name</label>
 			<input class="stdInfo" type="text" runat = "server" id = "firstname" required>
@@ -56,21 +56,24 @@
 			<br>
 			<label>Password</label>
 			<input class="stdInfo" type="password" runat = "server" id="password" required>
-			<input type = "submit" value="submit">
+			<br><br>
+			<button type = "submit" value="submit" id="btnsubmit">Submit</button>
 		</form>
 		<br><br>
 
+		<!-- WORKING PAGINATION (not sure if needed)
 		<div class="pagination-center">
-		<div class="pagination" >
-		  <!-- <a href="#">&laquo;</a> -->
-		  <a href="../pages/studentInfo.html"><span class="dot"></span></a>
-		  <a href="../pages/topics.html"><span class="dot"></span></a>
-		  <a href="../pages/faculty.html"><span class="dot"></span></a>
-		  <a href="../pages/questions.html"><span class="dot"></span></a>
-		  <a href="../pages/completeRegistration.html"><span class="dot"></span></a>
-		  <!-- <a href="../pages/.html">&raquo;</a> -->
-		</div>
-		</div>
+			<div class="pagination footer" >
+		    <a href="#">&laquo;</a>
+		  	<a href="../pages/studentInfo.html"><span class="dot"></span></a>
+		  	<a href="../pages/topics.html"><span class="dot"></span></a>
+		  	<a href="../pages/faculty.html"><span class="dot"></span></a>
+		  	<a href="../pages/questions.html"><span class="dot"></span></a>
+		  	<a href="../pages/completeRegistration.html"><span class="dot"></span></a>
+		  	<a href="../pages/.html">&raquo;</a>
+				<a href="../pages/topics.html"><button id="btnsubmit">Continue</button></a>
+			</div>
+		</div>  -->
 		</div>
 
 	</body>

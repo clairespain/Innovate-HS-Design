@@ -44,6 +44,7 @@ i{
 
 /* welcome page */
 .welcome p{
+  text-align: center;
   font-family: Arial;
   color: #707070;
   font-size: 14px;
@@ -132,6 +133,7 @@ i{
   position: relative;
   height: 130px;
   width: 130px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .3);
 }
 
 .blocks-icons {
@@ -343,23 +345,37 @@ textarea {
 
 /* pagination */
 
-.pagination-center{
-text-align: center;
-position: fixed;
-bottom: 0px;
-width: 100%;
-}
-.pagination {
-  background-color: white;
 
+  .pagination{
+    width: 100%;
+    height: 5vh;
+    padding: 30px;
+    text-align: center;
+  }
 
-}
-.pagination a {
-  display: inline-block;
-  margin:  4px;
-  text-decoration: none;
+  .footer {
+    width: 100%;
+    height: 5vh;
+  }
 
-}
+  .pagination a {
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    margin: 0 4px;
+    color: rgb(140, 142, 144);
+  }
+
+#btnsubmit{
+    background-color: #70002e;
+    width: 100px;
+    padding: 10px 10px;
+    color: white;
+    font-family: Arial;
+    font-size: 16px;
+    border: none;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .3);
+  }
 
 /* .pagination a.active {
   background-color: #70002e;
