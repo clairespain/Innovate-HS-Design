@@ -8,7 +8,7 @@
 	<script type = "text/javascript">
     function sendAndReturn() {
         $.ajax({
-            url: "https://innovateserver.dungeonbuddy.net/Server.aspx/insertStudent",
+            url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/serverMethodName",
             type: 'POST',
             data: {firstname: document.getElementById("firstname").innerHTML, lastname: document.getElementById("lastname").innerHTML, email: document.getElementById("email").innerHTML, password: document.getElementById("password").innerHTML, school: null},
             contentType: "application/json; charset=utf-8",
