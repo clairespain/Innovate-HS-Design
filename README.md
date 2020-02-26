@@ -30,7 +30,7 @@ Phew, that was exhausting (✖╭╮✖)
 | [X] Organize files                                               |
 | [x] Connect pages with JavaScript                                |
 | [x] Proofread pages                                              |
-| [] Label objects with JS and Json for Data design group          |
+| [x] Label objects with JS and Json for Data design group          |
 | [X] Cry                                                          |
 | [] Look into Gameplay idea, QR Code Camera reader implementation |
 | [] Admin Website?                                                |

@@ -8,10 +8,43 @@
   <meta name="author" content="Claire Spain">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/myStyle.css">
-    <script src="../js/myScript.js"></script>
-  <title>Topics</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+    <!-- <script src="../js/myScript.js"></script> -->
+    <script type="text/javascript">
+    // function fntest(){
+    // $.ajax({
+    //     type: 'post',
+    //     url: "url",
+    //     data: {
+    //       myLuckyNumber: 13
+    //     },
+    //     // timeout: 2000,
+    //     // beforeSend: function(){
+    //     //   $content.append('div id="load">Loading</div>');
+    //     // },
+    //     // complete: function(data) {
+    //     //   $('#loading').remove();
+    //     // },
+    //     success: function(response) {
+    //       // $content.html( $(data).find('#container')).hide().fadeIn(400);
+    //       console.log(response);
+    //     }
+    //     // fail: function(response) {
+    //     //   console.log(response);
+    //     // }
+    // });
+    // }
 
+  $(function(){
+      $.ajax({
+
+      });
+  });
+    </script>
+  <title>Topics</title>
+<!-- TODO: Change checkboxes to be invisible -->
 </head>
+<button type="button" name="button" onclick="fntest();" >Test</button>
 <div class="">
   <img class="header-logo-post" src="..\img\checklist.svg" alt="">
 </div>
@@ -27,7 +60,7 @@
   <div class="blocks-topics">
     <h5>Business
       <br>& Entrepreneurship</h5>
-      <input type="checkbox" id="toggle">
+      <input type="checkbox" id="toggle" id="Business">
       <!-- <div class="control-me">Control me</div> -->
   </div>
 
@@ -35,30 +68,35 @@
     <h5>Communication
       <br> &
       <br>Artistic Expression</h5>
+      <input type="checkbox" id="toggle" id="Communication">
   </div>
 
   <div class="blocks-topics">
     <h5>Environment
       <br>&
       <br>Sustainability</h5>
+      <input type="checkbox" id="toggle" id="Environment">
   </div>
 
   <div class="blocks-topics">
     <h5>Health
       <br> &
       <br> Human Development</h5>
+      <input type="checkbox" id="toggle" id="Health">
   </div>
 
   <div class="blocks-topics">
     <h5>Science
       <br>&
       <br>Technology</h5>
+      <input type="checkbox" id="toggle" id="Science">
   </div>
 
   <div class="blocks-topics">
     <h5>Justice, Policy
       <br>&
       <br>Pubic Service</h5>
+      <input type="checkbox" id="toggle" id="Justice">
   </div>
 </div>
 <br>

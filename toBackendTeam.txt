@@ -1,0 +1,14 @@
+To Backend Team
+
+API info?
+
+--------------------
+for (topics.HTML) on myScript.js
+  Send data of which two checkboxes were selected by the user.
+  Sample Response:
+  [
+   {id: 1,
+    choice_1: 'Business',
+    choice_2: 'Environment'
+    }
+  ]
