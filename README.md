@@ -1,11 +1,18 @@
 # Innovate-HS-design
+
+
 Soft goals for Wednesday 26th:
 
-Replace pagination with buttons
-ask cassens to compile and check for first page
+Replace pagination with buttons @
+Ask Cassens to compile and check for first page? @
+Install and test on Cordova, android and ios.
+Styling
 Json on those three Pages
-Json for retrieving data? 
-login page after registration?
+
+Wednesday
+Json for retrieving data on 2 pages
+
+Login page after registration?
 Admin Page?
 
 

@@ -392,3 +392,24 @@ width: 100%;
 /* .btn:hover{
   border-color: black;
 } */
+
+/* Topics checkboxes*/
+.control-me {
+  background-color: #70002e;
+}
+
+#toggle:checked ~ .control-me {
+  background-color: grey;
+}
+
+/* label {
+    background: #A5D6A7;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+
+} */
+
+.visually-hidden {
+    position: absolute;
+    left: -100vw;
+  }
