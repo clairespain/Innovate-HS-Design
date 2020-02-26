@@ -24,44 +24,36 @@
     }
 
 	function validateForm(){
-		var fn = document.forms["registration"]["firstname"].value;
-		var ln = document.forms["registration"]["lastname"].value;
-		var em = document.forms["registration"]["email"].value;
+		//var fn = document.forms["login"]["firstname"].value;
+		//var ln = document.forms["login"]["lastname"].value;
+		var em = document.forms["login"]["email"].value;
 		if(em.search("@")==null){
 			alert("Please enter a valid email");
 			return false;
 		}
 
-		if (fn == "" || ln == ""){
-			alert("Name must be filled out");
-			return false;
-		}
+		//if (fn == "" || ln == ""){
+			//alert("Name must be filled out");
+			//return false;
+		//}
 	}
     </script>
 	<body>
 		<div class="center">
 
 			<img src="../img/infoIcon.jpg" alt="info" height="auto" width="300">
-			<p><strong>Please enter your student information</strong></p>
 			<br><br>
-		<form id="registration" runat="server" onsubmit = "return validateForm()" method="POST">
-			<label>First Name</label>
-			<input class="stdInfo" type="text" runat = "server" id = "firstname" required>
-			<br>
-			<label>Last Name</label>
-			<input class="stdInfo" type="text" runat="server" id="lastname" required>
-			<br>
+		<form id="login" runat="server" onsubmit = "return validateForm()" method="POST">
 			<label>Email</label>
 			<input class="stdInfo" type="text" runat = "server" id="email" required>
 			<br>
 			<label>Password</label>
 			<input class="stdInfo" type="password" runat = "server" id="password" required>
 			<br><br>
-			<button type = "submit" value="submit" id="btnsubmit">Submit</button>
+			<button type = "submit" value="submit" id="btnsubmit">Login</button>
 		</form>
 		<br><br>
-		<p>Already have an account? <a href="../pages/login.html">Login</a></p>
-
+		<p>Don't have an account? <a href="../pages/studentinfo.html">Register</a></p>
 
 		<!-- WORKING PAGINATION (not sure if needed)
 		<div class="pagination-center">
