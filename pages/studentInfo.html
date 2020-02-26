@@ -7,19 +7,24 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
 	<script type = "text/javascript">
     function sendAndReturn() {
+	var fn = document.getElementById("firstname").value;
+	var lname = document.getElementById("lastname").value;
+	var em = document.getElementById("email").value;
+	var pw = document.getElementById("password").value;
         $.ajax({
-            url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/serverMethodName",
+            url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/insertStudent",
             type: 'POST',
-            data: {firstname: document.getElementById("firstname").innerHTML, lastname: document.getElementById("lastname").innerHTML, email: document.getElementById("email").innerHTML, password: document.getElementById("password").innerHTML, school: null},
+            data: '{firstName: "'+fn+'", lastName: "'+lname+'", email: "'+em+'", password: "'+pw+'", school: null}',
             contentType: "application/json; charset=utf-8",
             dataType: "json",
 
             success: function (serverResponse) {
                 let testStudent = serverResponse.d;
                 alert(testStudent);
+				window.open("../pages/topics.html", "_self");
             }
         });
-		alert("Call made");
+
         return false;
     }
 
@@ -56,24 +61,23 @@
 			<br>
 			<label>Password</label>
 			<input class="stdInfo" type="password" runat = "server" id="password" required>
-			<br><br>
-			<button type = "submit" value="submit" id="btnsubmit">Submit</button>
 		</form>
 		<br><br>
 
-		<!-- WORKING PAGINATION (not sure if needed)
 		<div class="pagination-center">
-			<div class="pagination footer" >
-		    <a href="#">&laquo;</a>
+			<div class="pagination" >
+		  	<!-- <a href="#">&laquo;</a>
 		  	<a href="../pages/studentInfo.html"><span class="dot"></span></a>
-		  	<a href="../pages/topics.html"><span class="dot"></span></a>
+		  	<a href = "javascript: sendAndReturn()"><span class="dot"></span></a>
 		  	<a href="../pages/faculty.html"><span class="dot"></span></a>
 		  	<a href="../pages/questions.html"><span class="dot"></span></a>
 		  	<a href="../pages/completeRegistration.html"><span class="dot"></span></a>
-		  	<a href="../pages/.html">&raquo;</a>
-				<a href="../pages/topics.html"><button id="btnsubmit">Continue</button></a>
+		  	<a href="../pages/.html">&raquo;</a> -->
+				<a href = "javascript: sendAndReturn()"><button id="btnsubmit">Continue</button></a>
 			</div>
-		</div>  -->
+		</div>
+		<br />
+		<p>Already have an account? <a href="../pages/login.html">Login</a></p>
 		</div>
 
 	</body>
