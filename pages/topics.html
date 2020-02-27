@@ -26,62 +26,68 @@ for (var i = 0; inputElements[i]; ++i) {
       $.ajax({
           url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/chooseTopics",
           type: 'POST',
-          data: '{topicChoice1: " "}' '{firstName: "'+fn+'", lastName: "'+lname+'", email: "'+em+'", password: "'+pw+'", school: null}',
+          data: '{topicChoice1: , topicsChoice2: }',
           contentType: "application/json; charset=utf-8",
           dataType: "json",
 
           success: function (serverResponse) {
               let testStudent = serverResponse.d;
               alert(testStudent);
-      window.open("../pages/topics.html", "_self");
+      window.open("../pages/faculty.html", "_self");
           }
       });
 
       return false;
+      alert("Working");
   }
 
-function validateForm(){
-  var fn = document.forms["registration"]["firstname"].value;
-  var ln = document.forms["registration"]["lastname"].value;
-  var em = document.forms["registration"]["email"].value;
-  if(em.search("@")==null){
-    alert("Please enter a valid email");
-    return false;
-  }
 
-  if (fn == "" || ln == ""){
-    alert("Name must be filled out");
-    return false;
-  }
+
+
+// function validateForm(){
+//   var fn = document.forms["registration"]["firstname"].value;
+//   var ln = document.forms["registration"]["lastname"].value;
+//   var em = document.forms["registration"]["email"].value;
+//   if(em.search("@")==null){
+//     alert("Please enter a valid email");
+//     return false;
+//   }
+
+  // if (fn == "" || ln == ""){
+  //   alert("Name must be filled out");
+  //   return false;
+  // }
 }
 
 
 
 
-    function sendAndReturn() {
-      $(document).ready(function() {
-        $("form#myForm").submit(function() {
+    // function sendAndReturn() {
+    //   $(document).ready(function() {
+    //     $("form#myForm").submit(function() {
+    //
+    //       // var myCheckboxes = new Array();
+    //       // $("input:checked").each(function() {
+    //       //   myCheckboxes.push($(this).val());
+    //       // });
+    //
+    //
+    //
+    //       $.ajax({
+    //         type: "POST",
+    //         url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/chooseTopics",
+    //         dataType: 'json',
+    //         data: 'myCheckboxes=' + myCheckboxes,
+    //         success: function(data) {
+    //           $('#myResponse').html(data)
+    //         }
+    //       });
+    //       return false;
+    //     });
+    //   });
+    // }
 
-          // var myCheckboxes = new Array();
-          // $("input:checked").each(function() {
-          //   myCheckboxes.push($(this).val());
-          // });
 
-
-
-          $.ajax({
-            type: "POST",
-            url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/chooseTopics",
-            dataType: 'json',
-            data: 'myCheckboxes=' + myCheckboxes,
-            success: function(data) {
-              $('#myResponse').html(data)
-            }
-          });
-          return false;
-        });
-      });
-    }
     // function fntest(){
     // $.ajax({
     //     type: 'post',
