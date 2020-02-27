@@ -306,15 +306,35 @@ i{
 
 .title-banner {
   background: rgba(112, 0, 46, 1);
-  height: 100px;
+  padding: 8px;
+  margin: 30px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
 }
 
-.title-banner h2 {
-  text-align: center;
-  padding-top: 35px;
+.title-banner p {
+  text-align: left;
   font-family: Arial;
+  padding-left: 20px;
+  font-size: 20px;
   color: white;
-  font-size: 45;
+}
+
+.resource {
+  background:white;
+  padding: 8px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.resource p {
+  text-align: center;
+  font-family: Arial;
+  font-size: 20px;
+  color: white;
+}
+
+.resource.image{
+  padding: 0px;
 }
 
 .posters {
