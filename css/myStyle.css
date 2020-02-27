@@ -89,7 +89,7 @@ i{
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(1, auto);
   margin-left: 2em;
   margin-right: 2em;
   grid-gap: 10px;
@@ -132,8 +132,11 @@ i{
   background: rgba(112, 0, 46, 1);
   position: relative;
   height: 130px;
-  width: 130px;
+  width: 90%;
   box-shadow: 0 4px 18px rgba(0, 0, 0, .3);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .blocks-icons {
@@ -148,6 +151,14 @@ i{
   font-size: 20px;
   margin-left: 10px;
   margin-top: 10px;
+}
+
+#foodpass{
+  display: none;
+}
+
+#feedback{
+  display: none;
 }
 
 
