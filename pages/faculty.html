@@ -29,13 +29,13 @@
     <h3><u>Business & Entrepreneurship</u></h3>
     <label class="container">
       <h4>The Future of Work, David Firth, College of Business</h4>
-      <input type="checkbox">
+      <input type="checkbox" name='session'>
       <span class="checkmark"></span>
     </label>
     <p>Students will discuss the future of work, including artificial intelligence.</p>
     <label class="container">
       <h4>Creating Financial Fitness, Andrea Janssen, Financial Education Program</h4>
-      <input type="checkbox">
+      <input type="checkbox" name='session'>
       <span class="checkmark"></span>
     </label>
     <p>Together we will practice creating a budget and look ahead to financial
@@ -51,7 +51,7 @@
     <h3><u>Communication & Artistic Expression</u></h3>
     <label class="container">
       <h4>Smooth Communicating, Christina Yoshimura, Communication Studies </h4>
-      <input type="checkbox">
+      <input type="checkbox" name='session'>
       <span class="checkmark"></span>
     </label>
     <p>Use the research from communication studies to become a pro at starting
@@ -63,7 +63,7 @@
       <h4>Dance Technique into Choreography, Heidi Jones Eggert, School of Theater
         and Dance
       </h4>
-      <input type="checkbox">
+      <input type="checkbox" name='session'>
       <span class="checkmark"></span>
     </label>
     <p>Dive into the creative discipline of choreography. This session will take
@@ -74,7 +74,7 @@
     <label class="container">
       <h4>Decoding Language, Leora Bar-el, Anthropology and Linguistics</h4>
 
-      <input type="checkbox">
+      <input type="checkbox" name='session'>
       <span class="checkmark"></span>
     </label>
     <p>Through hands-on activities, students will learn basic language-decoding
@@ -86,7 +86,7 @@
     <label class="container">
       <h4>"Climate Policy: Will it Ever Happen in the United States?" with Sara
         Rinfret, Public Administration and Policy.</h4>
-      <input type="checkbox">
+      <input type="checkbox" name='session'>
       <span class="checkmark"></span>
     </label>
     <p> In this active learning presentation, students are provided a brief
@@ -96,7 +96,7 @@
     <label class="container">
       <h4>Living Landscapes, Germaine White, Mansfield Director of Native American
         Engagement</h4>
-      <input type="checkbox">
+      <input type="checkbox" name='session'>
       <span class="checkmark"></span>
     </label>
     <p>Culture, Climate Science & Education in Tribal and Native Communities
@@ -108,7 +108,7 @@
     <h3><u>Justice, Policy, & Public Service</u></h3>
     <label class="container">
       <h4>The Skin We’re In, Tobin Shearer, African-American Studies</h4>
-      <input type="checkbox">
+      <input type="checkbox" name='session'>
       <span class="checkmark"></span>
     </label>
     <p>White supremacy is on the rise. Race is constantly in the news and we
@@ -123,7 +123,7 @@
     <label class="container">
       <h4>"7 Skulls - 7 Stories: Teasers in Forensic Anthropology" with Garry Kerr,
         Anthropology. </h4>
-      <input type="checkbox">
+      <input type="checkbox" name='session'>
       <span class="checkmark"></span>
     </label>
     <p>Explore the nuances of skeletal identification with this hands-on session
@@ -133,7 +133,7 @@
       various cases.</p>
     <label class="container">
       <h4>StickerU at the Innovation Factory, Elizabeth Dove & Brad Allen</h4>
-      <input type="checkbox">
+      <input type="checkbox" name='session'>
       <span class="checkmark"></span>
     </label>
     <p>Join us in a workshop sprint and learn to make an iconic personal design,
@@ -145,7 +145,7 @@
     <label class="container">
       <h4>Making Reality Fun: Allow Your Creativity to Flow While Making a Game,
         Michael Cassens, Media Arts</h4>
-      <input type="checkbox">
+      <input type="checkbox" name='session'>
       <span class="checkmark"></span>
     </label>
     <p>This session will engage student participants by allowing them to design,
@@ -158,7 +158,7 @@
     <h3><u>Planning for the University Experience</u></h3>
     <label class="container">
       <h4>"Explore Campus" with a UM Student Advocate. </h4>
-      <input type="checkbox">
+      <input type="checkbox" name='session'>
       <span class="checkmark"></span>
     </label>
     <p>In this session students will have the opportunity to explore UM’s beautiful
@@ -178,6 +178,15 @@
     <!-- <a href="../pages/.html">&raquo;</a> -->
   </div>
   </div>
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript">
+  //limit 3 code from Praveen @https://stackoverflow.com/questions/19001844/how-to-limit-the-number-of-selected-checkboxes
+    $('input[type=checkbox]').on('change', function (e) {
+      if ($('input[type=checkbox]:checked').length > 3) {
+        $(this).prop('checked', false);
+      }
+    });
+  </script>
 </body>
 
 </html>
