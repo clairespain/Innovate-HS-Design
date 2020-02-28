@@ -9,15 +9,15 @@ Ask Cassens to compile and check for first page? @
 Tuesday Night:
 
 Install and test on Cordova, android and ios
-Styling
+Styling@
 Json on those three Pages: Questions/Topics/Feedback
 
 Wednesday:
 Json for retrieving data on two pages: Faculty/Schedule
 
 Later:
-Update Welcome page
-Login page after registration?
+Update Welcome page @
+Login page after registration? @
 
 Admin Page?
 

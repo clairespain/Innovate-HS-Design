@@ -8,120 +8,10 @@
   <meta name="author" content="Claire Spain">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/myStyle.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
-  <!-- <script src="../js/myScript.js"></script> -->
+<script type="text/javascript" src="../js/jquery.js"></script>
   <script type="text/javascript">
-  function sendAndReturn() {
-// var fn = document.getElementById("firstname").value;
-// var lname = document.getElementById("lastname").value;
-// var em = document.getElementById("email").value;
-// var pw = document.getElementById("password").value;
-var checkedValue = null;
-var inputElements = document.getElementsByClassName('messageCheckbox');
-for (var i = 0; inputElements[i]; ++i) {
-  if (inputElements[i].checked) {
-    checkedValue = inputElements[i].value;
-    break;
-  }
-      $.ajax({
-          url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/chooseTopics",
-          type: 'POST',
-          data: '{topicChoice1: , topicsChoice2: }',
-          contentType: "application/json; charset=utf-8",
-          dataType: "json",
-
-          success: function (serverResponse) {
-              let testStudent = serverResponse.d;
-              alert(testStudent);
-      window.open("../pages/faculty.html", "_self");
-          }
-      });
-
-      return false;
-      alert("Working");
-  }
 
 
-
-
-// function validateForm(){
-//   var fn = document.forms["registration"]["firstname"].value;
-//   var ln = document.forms["registration"]["lastname"].value;
-//   var em = document.forms["registration"]["email"].value;
-//   if(em.search("@")==null){
-//     alert("Please enter a valid email");
-//     return false;
-//   }
-
-  // if (fn == "" || ln == ""){
-  //   alert("Name must be filled out");
-  //   return false;
-  // }
-}
-
-
-
-
-    // function sendAndReturn() {
-    //   $(document).ready(function() {
-    //     $("form#myForm").submit(function() {
-    //
-    //       // var myCheckboxes = new Array();
-    //       // $("input:checked").each(function() {
-    //       //   myCheckboxes.push($(this).val());
-    //       // });
-    //
-    //
-    //
-    //       $.ajax({
-    //         type: "POST",
-    //         url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/chooseTopics",
-    //         dataType: 'json',
-    //         data: 'myCheckboxes=' + myCheckboxes,
-    //         success: function(data) {
-    //           $('#myResponse').html(data)
-    //         }
-    //       });
-    //       return false;
-    //     });
-    //   });
-    // }
-
-
-    // function fntest(){
-    // $.ajax({
-    //     type: 'post',
-    //     url: "url",
-    //     data: {
-    //       myLuckyNumber: 13
-    //     },
-    //     // timeout: 2000,
-    //     // beforeSend: function(){
-    //     //   $content.append('div id="load">Loading</div>');
-    //     // },
-    //     // complete: function(data) {
-    //     //   $('#loading').remove();
-    //     // },
-    //     success: function(response) {
-    //       // $content.html( $(data).find('#container')).hide().fadeIn(400);
-    //       console.log(response);
-    //     }
-    //     // fail: function(response) {
-    //     //   console.log(response);
-    //     // }
-    // });
-    // }
-    //
-    // $(function() {
-    //   $.ajax({
-    //     type: 'post',
-    //     url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/serverMethodName",
-    //     data {
-    //
-    //     },
-    //     // var choicetopics = ""+checkbox[0]+checkbox[1]+checkbox[2]+checkbox[3]+checkbox[4]+checkbox[5]
-    //   });
-    // });
   </script>
   <title>Topics</title>
   <!-- TODO: Change checkboxes to be invisible -->
@@ -143,12 +33,12 @@ for (var i = 0; inputElements[i]; ++i) {
 </div>
 <br>
 <form id="myform" class="myform" method="post" name="myform">
-  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes " value="Business" /> Business
-  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes" value="Environment" /> Environment
-  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes" value="Communication" /> Communications
-  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes" value="Health" /> Health
-  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes" value="Science" /> Science
-  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes" value="Justice" /> Justice
+  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes " value="Business and Entrepreneurship" /> Business
+  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes" value="Environment and Sustainability" /> Environment
+  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes" value="Communication and Artistic Expression" /> Communications
+  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes" value="Health and Human Development" /> Health
+  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes" value="Science and Technology" /> Science
+  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes" value="Justice, Policy and Public Service" /> Justice
   <input id="submit" type="submit" name="submit" value="Submit" onclick="return submitForm()" />
 </form>
 <div class="grid-container-topics">
