@@ -223,7 +223,12 @@
   <script type="text/javascript">
   //limit 3 code from Praveen @https://stackoverflow.com/questions/19001844/how-to-limit-the-number-of-selected-checkboxes
   var threechosen = [];  
-  $('input[type=checkbox]').on('change', function (e) {
+ 
+
+    // get all the options chosen from the user
+    $(document).ready(function() {
+
+      $('input[type=checkbox]').on('change', function (e) {
       if ($('input[type=checkbox]:checked').length > 3) {
         $(this).prop('checked', false);
       }
@@ -234,29 +239,20 @@
       }
     });
 
-    // get all the options chosen from the user
-    $(document).ready(function() {
         $("#btnsubmit").click(function() {
-         // var topthree = "";
-        //  $('input[type="checkbox"]').each(function() {
-        //    var name = $(this).attr('name'); // grab name of original
-        //    var value = $(this).attr('id'); // grab value of original
-         //   var ischecked = $(this).is(":checked"); //check if 
-            
-         //   if(ischecked)
-         //   {
-         //     topthree += value + ",";
-         //   }
-            alert("hi : " + threechosen.toString());
-            window.location = "questions.html";
-         // });
-          //var finalthree = topthree.substring(0,topthree.length-1);
-        /*  $.ajax({
-                url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/insertStudent",
+          var email = window.localStorage.getItem("email");
+          var pw = window.localStorage.getItem("password");
+          while(threechosen.length < 3)
+          {
+              threechosen.push(0);
+          } // make sure the array has at least three values
+        
+          $.ajax({
+                url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/chooseTopics",
                 type: "post",
                 dataType: "json",
                 contentType: "application/json",
-                data: '{finaltree: "' + finalthree + '"}',
+                data: '{email: "' + email + '", password: "' + pw + '", choiceOneID: ' + threechosen[0] +', choiceTwoID: '+ threechosen[1] +', choiceThreeID: '+ threechosen[2]+'}',
                 async: false,
                 success: function(serverResponse) {
                     // alert("Success!");
@@ -265,7 +261,7 @@
                 error: function(data, textStatus, jqXHR) {
                     //alert("bad" + textStatus + ":" + jqXHR.responseText);
                 }
-            });*/
+            });
         }); // end button
     }); // end onready
 
@@ -297,12 +293,10 @@
 				//You could grab all of the individual data fields here if you wish, not just IsFull.
 			}
 
-      alert(test);
+      //alert(test);
       
-      var email = window.localStorage.getItem("email");
-      var pw = window.localStorage.getItem("password");
-
-      alert(email + ":" + pw);
+      
+      //alert(email + ":" + pw);
 		}
 	});
     }

@@ -9,8 +9,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/myStyle.css">
 <script type="text/javascript" src="../js/jquery.js"></script>
-  <script type="text/javascript">
 
+
+<script type="text/javascript">
+
+var twochosen = [];  
+  
+    // function sendAndReturn() {
+    $(document).ready(function() {
+
+      $('input[type=checkbox]').on('change', function (e) {
+      if ($('input[type=checkbox]:checked').length > 2) {
+        $(this).prop('checked', false);
+      }
+      else
+      {
+        var value = $(this).attr('id'); // grab value of original
+        twochosen.push(value);
+      }
+    });
+
+        $("#btnsubmit").click(function() {
+          var email = window.localStorage.getItem("email");
+          var pw = window.localStorage.getItem("password");
+          while(twochosen.length < 2)
+          {
+              twochosen.push("");
+          } // make sure the array has at least three values
+            $.ajax({
+                url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/insertStudent",
+                type: "post",
+                dataType: "json",
+                contentType: "application/json",
+                data: '{email: "'+ email +'", password: "'+ pw +'", choiceOneName: "'+ twochosen[0]+'", choiceTwoName: "'+ twochosen[1]+'"}',
+                async: false,
+                success: function(serverResponse) {
+                    // alert("Success!");
+                    window.location = "faculty.html";
+                },
+                error: function(data, textStatus, jqXHR) {
+                    //alert("bad" + textStatus + ":" + jqXHR.responseText);
+                }
+            });
+        });
+    });
 
   </script>
   <title>Topics</title>
@@ -32,57 +74,55 @@
     problem in this area.</p>
 </div>
 <br>
-<form id="myform" class="myform" method="post" name="myform">
-  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes " value="Business and Entrepreneurship" /> Business
-  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes" value="Environment and Sustainability" /> Environment
-  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes" value="Communication and Artistic Expression" /> Communications
-  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes" value="Health and Human Development" /> Health
-  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes" value="Science and Technology" /> Science
-  <input type="checkbox" name="myCheckboxes[]" id="myCheckboxes" value="Justice, Policy and Public Service" /> Justice
-  <input id="submit" type="submit" name="submit" value="Submit" onclick="return submitForm()" />
-</form>
+ 
+
 <div class="grid-container-topics">
 
   <div class="blocks-topics">
     <h5>Business
       <br>& Entrepreneurship</h5>
-    <!-- <input type="checkbox" id="toggle" id="Business"> -->
-    <!-- <div class="control-me">Control me</div> -->
+      <input type="checkbox" name="myCheckboxes" id="myCheckbox1" value="Business and Entrepreneurship" /> 
+
+
   </div>
 
   <div class="blocks-topics">
     <h5>Communication
-      <br> &
-      <br>Artistic Expression</h5>
-    <!-- <input type="checkbox" id="toggle" id="Communication"> -->
+      <br>& Artistic Expression</h5>
+      <input type="checkbox" name="myCheckboxes" id="myCheckbox3" value="Communication and Artistic Expression" /> 
+ 
   </div>
 
   <div class="blocks-topics">
     <h5>Environment
       <br>&
       <br>Sustainability</h5>
-    <!-- <input type="checkbox" id="toggle" id="Environment"> -->
+      <input type="checkbox" name="myCheckboxes" id="myCheckbox2" value="Environment and Sustainability" /> 
+ 
   </div>
 
   <div class="blocks-topics">
-    <h5>Health
-      <br> &
-      <br> Human Development</h5>
-    <!-- <input type="checkbox" id="toggle" id="Health"> -->
+    <h5> Explore UM
+      <br> 
+      <br> </h5>
+      <input type="checkbox" name="myCheckboxes" id="myCheckbox4" value="Exploring UM" /> 
+ 
   </div>
 
   <div class="blocks-topics">
     <h5>Science
       <br>&
       <br>Technology</h5>
-    <!-- <input type="checkbox" id="toggle" id="Science"> -->
+      <input type="checkbox" name="myCheckboxes" id="myCheckbox5" value="Science and Technology" /> 
+ 
   </div>
 
   <div class="blocks-topics">
     <h5>Justice, Policy
       <br>&
       <br>Public Service</h5>
-    <!-- <input type="checkbox" id="toggle" id="Justice"> -->
+      <input type="checkbox" name="myCheckboxes" id="myCheckbox6" value="Justice, Policy and Public Service" /> 
+ 
   </div>
 </div>
 <br>
@@ -95,7 +135,7 @@
     <a href="../pages/questions.html"><span class="dot"></span></a>
     <a href="../pages/completeRegistration.html"><span class="dot"></span></a>
     <a href="../pages/.html">&raquo;</a> -->
-    <a href="../pages/faculty.html"><button id="btnsubmit">Submit</button></a>
+    <button id="btnsubmit">Submit</button>
   </div>
 </div>
 </body>

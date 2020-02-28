@@ -10,11 +10,14 @@
     $(document).ready(function() {
         $("#btnsubmit").click(function() {
             var fn = $("#firstname").val();
-            //alert(fn);
             var lname = $("#lastname").val();
-
             var em = $("#email").val();
             var pw = $("#password").val();
+            if(fn == "" || lname == "" || em == "" || pw == "")
+            {
+                alert("Please fill in all fields");
+                return false;
+            }
             window.localStorage.setItem("email", em);
             window.localStorage.setItem("password", pw);
             
@@ -26,11 +29,10 @@
                 data: '{firstName: "' + fn + '", lastName: "' + lname + '", email: "' + em + '", password: "' + pw + '", school: null}',
                 async: false,
                 success: function(serverResponse) {
-                    // alert("Success!");
-                    window.location = "faculty.html";
+                    window.location = "topics.html";
                 },
                 error: function(data, textStatus, jqXHR) {
-                    //alert("bad" + textStatus + ":" + jqXHR.responseText);
+                   
                 }
             });
         });

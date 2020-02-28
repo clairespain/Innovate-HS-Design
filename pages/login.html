@@ -22,7 +22,9 @@
                 success: function(serverResponse) {
                     // alert("Success!");
 					// check for the response to see if it's valid
-                    window.location = "schedule.html";
+					window.localStorage.setItem("email", em);
+           			window.localStorage.setItem("password", pw);
+                    window.location = "questions.html";
                 },
                 error: function(data, textStatus, jqXHR) {
                     //alert("bad" + textStatus + ":" + jqXHR.responseText);

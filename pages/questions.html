@@ -24,17 +24,19 @@
 
 $(document).ready(function() {
         $("#btnsubmit").click(function() {
-            var fn = $("#problem1").val();
-            var lname = $("#problem2").val();
-            var em = $("#verb1").val();
-            var pw = $("#verb2").val();
+            var problem1 = $("#problem1").val();
+            var problem2 = $("#problem2").val();
+            var verb1 = $("#verb1").val();
+            var verb2 = $("#verb2").val();
 			var adverb = $("#adverb").val();
+			var email = window.localStorage.getItem("email");
+          var pw = window.localStorage.getItem("password");
             $.ajax({
-                url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/insertStudent",
+                url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/insertMadLib",
                 type: "post",
                 dataType: "json",
                 contentType: "application/json",
-                data: '{problem1: "' + problem1 + '", problem2: "' + problem2 + '", verb1: "' + verb1 + '", verb2: "' + verb2 + '", adverb: "' + adverb + '"}',
+                data: '{email: "'+email +'", password: "'+ pw +'", problemOne: "'+ problem1+'", problemTwo: "'+problem2+'", verbOne: "'+verb1+'", verbTwo: "'+verb2+'", adverb: "'+adverb+'"}',
                 async: false,
                 success: function(serverResponse) {
                     window.location = "completeRegistration.html";
@@ -48,9 +50,9 @@ $(document).ready(function() {
 
 	function getInfo()
 	{
-		var email = window.localStorage.getItem("email");
-	  var pw = window.localStorage.getItem("password");
-	  alert(email + ":" + pw);
+		//var email = window.localStorage.getItem("email");
+	  //var pw = window.localStorage.getItem("password");
+	  //alert(email + ":" + pw);
 	}
 
     </script>
