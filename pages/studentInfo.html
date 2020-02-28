@@ -15,6 +15,9 @@
 
             var em = $("#email").val();
             var pw = $("#password").val();
+            window.localStorage.setItem("email", em);
+            window.localStorage.setItem("password", pw);
+            
             $.ajax({
                 url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/insertStudent",
                 type: "post",
@@ -24,7 +27,7 @@
                 async: false,
                 success: function(serverResponse) {
                     // alert("Success!");
-                    window.location = "topics.html";
+                    window.location = "faculty.html";
                 },
                 error: function(data, textStatus, jqXHR) {
                     //alert("bad" + textStatus + ":" + jqXHR.responseText);

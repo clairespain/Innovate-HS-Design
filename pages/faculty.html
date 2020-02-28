@@ -10,7 +10,7 @@
   <title>InnovateHS Faculty</title>
 </head>
 
-<body>
+<body onload="loadClasses();">
   <!-- TODO: make drop down menus -->
   <div class="header-faculty">
     <img src="../img/teaching.svg" alt="">
@@ -31,7 +31,7 @@
     <div>
       <label class="container">
         <h4>The Future of Work, David Firth, College of Business</h4>
-        <input type="checkbox">
+        <input type="checkbox" name='session' id="22">
         <span class="checkmark"></span>
       </label>
       <p>Students will discuss the future of work, including artificial intelligence.</p>
@@ -40,7 +40,7 @@
     <div>
       <label class="container">
         <h4>Creating Financial Fitness, Andrea Janssen, Financial Education Program</h4>
-        <input type="checkbox">
+        <input type="checkbox" name='session' id="23">
         <span class="checkmark"></span>
       </label>
       <p>Together we will practice creating a budget and look ahead to financial
@@ -59,7 +59,7 @@
     <div>
       <label class="container">
         <h4>Smooth Communicating, Christina Yoshimura, Communication Studies </h4>
-        <input type="checkbox" name='session'>
+        <input type="checkbox" name='session' id="18">
         <span class="checkmark"></span>
       </label>
       <p>Use the research from communication studies to become a pro at starting
@@ -73,7 +73,7 @@
       <label class="container">
         <h4>Dance Technique into Choreography, Heidi Jones Eggert, School of Theater
         and Dance</h4>
-        <input type="checkbox" name='session'>
+        <input type="checkbox" name='session' id="19">
         <span class="checkmark"></span>
       </label>
       <p>Dive into the creative discipline of choreography. This session will take
@@ -86,7 +86,7 @@
     <div>
       <label class="container">
         <h4>Decoding Language, Leora Bar-el, Anthropology and Linguistics</h4>
-        <input type="checkbox" name='session'>
+        <input type="checkbox" name='session' id="20">
         <span class="checkmark"></span>
       </label>
       <p>Through hands-on activities, students will learn basic language-decoding
@@ -102,7 +102,7 @@
       <label class="container">
         <h4>"Climate Policy: Will it Ever Happen in the United States?" with Sara
         Rinfret, Public Administration and Policy.</h4>
-        <input type="checkbox" name='session'>
+        <input type="checkbox" name='session' id="24">
         <span class="checkmark"></span>
       </label>
       <p> In this active learning presentation, students are provided a brief
@@ -115,7 +115,7 @@
       <label class="container">
         <h4>Living Landscapes, Germaine White, Mansfield Director of Native American
         Engagement</h4>
-        <input type="checkbox" name='session'>
+        <input type="checkbox" name='session' id="25">
         <span class="checkmark"></span>
       </label>
       <p>Culture, Climate Science & Education in Tribal and Native Communities
@@ -132,7 +132,7 @@
     <div>
       <label class="container">
         <h4>The Skin We’re In, Tobin Shearer, African-American Studies</h4>
-        <input type="checkbox" name='session'>
+        <input type="checkbox" name='session' id="21">
         <span class="checkmark"></span>
       </label>
       <p>White supremacy is on the rise. Race is constantly in the news and we
@@ -151,7 +151,7 @@
       <label class="container">
         <h4>"7 Skulls - 7 Stories: Teasers in Forensic Anthropology" with Garry Kerr,
         Anthropology. </h4>
-        <input type="checkbox" name='session'>
+        <input type="checkbox" name='session' id="15">
         <span class="checkmark"></span>
       </label>
       <p>Explore the nuances of skeletal identification with this hands-on session
@@ -164,7 +164,7 @@
     <div>
       <label class="container">
         <h4>StickerU at the Innovation Factory, Elizabeth Dove & Brad Allen</h4>
-        <input type="checkbox" name='session'>
+        <input type="checkbox" name='session' id="16">
         <span class="checkmark"></span>
       </label>
       <p>Join us in a workshop sprint and learn to make an iconic personal design,
@@ -179,7 +179,7 @@
       <label class="container">
         <h4>Making Reality Fun: Allow Your Creativity to Flow While Making a Game,
         Michael Cassens, Media Arts</h4>
-        <input type="checkbox" name='session'>
+        <input type="checkbox" name='session' id="17">
         <span class="checkmark"></span>
       </label>
       <p>This session will engage student participants by allowing them to design,
@@ -195,7 +195,7 @@
       <h3><u>Planning for the University Experience</u></h3>
       <label class="container">
         <h4>"Explore Campus" with a UM Student Advocate. </h4>
-        <input type="checkbox" name='session'>
+        <input type="checkbox" name='session' id="26">
         <span class="checkmark"></span>
       </label>
       <p>In this session students will have the opportunity to explore UM’s beautiful
@@ -214,7 +214,7 @@
       <a href="../pages/questions.html"><span class="dot"></span></a>
       <a href="../pages/completeRegistration.html"><span class="dot"></span></a>
       <a href="../pages/.html">&raquo;</a> -->
-      <a href="../pages/completeRegistration.html"><button id="btnsubmit">Submit</button></a>
+      <button id="btnsubmit">Submit</button>
     </div>
   </div>
   <br />
@@ -222,11 +222,90 @@
   <script type="text/javascript" src="../js/jquery.js"></script>
   <script type="text/javascript">
   //limit 3 code from Praveen @https://stackoverflow.com/questions/19001844/how-to-limit-the-number-of-selected-checkboxes
-    $('input[type=checkbox]').on('change', function (e) {
+  var threechosen = [];  
+  $('input[type=checkbox]').on('change', function (e) {
       if ($('input[type=checkbox]:checked').length > 3) {
         $(this).prop('checked', false);
       }
+      else
+      {
+        var value = $(this).attr('id'); // grab value of original
+        threechosen.push(value);
+      }
     });
+
+    // get all the options chosen from the user
+    $(document).ready(function() {
+        $("#btnsubmit").click(function() {
+         // var topthree = "";
+        //  $('input[type="checkbox"]').each(function() {
+        //    var name = $(this).attr('name'); // grab name of original
+        //    var value = $(this).attr('id'); // grab value of original
+         //   var ischecked = $(this).is(":checked"); //check if 
+            
+         //   if(ischecked)
+         //   {
+         //     topthree += value + ",";
+         //   }
+            alert("hi : " + threechosen.toString());
+            window.location = "questions.html";
+         // });
+          //var finalthree = topthree.substring(0,topthree.length-1);
+        /*  $.ajax({
+                url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/insertStudent",
+                type: "post",
+                dataType: "json",
+                contentType: "application/json",
+                data: '{finaltree: "' + finalthree + '"}',
+                async: false,
+                success: function(serverResponse) {
+                    // alert("Success!");
+                    window.location = "questions.html";
+                },
+                error: function(data, textStatus, jqXHR) {
+                    //alert("bad" + textStatus + ":" + jqXHR.responseText);
+                }
+            });*/
+        }); // end button
+    }); // end onready
+
+    // go to the questions page
+
+    function loadClasses()
+    {
+      $.ajax({
+		url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/getClasses",
+		type: 'POST',
+		contentType: "application/json; charset=utf-8",
+		dataType: "json",
+
+		success: function (serverResponse) {
+			//I have decided to use a DataPackage object for all server-side output containing these three things.
+			//Keep this in all ajax functions.
+			
+			let data = serverResponse.d.Data;                           // (JSON Object) Nullable, if you are expecting data from the database or server it can be found here.  See Database ppl for specifics.
+			let message = serverResponse.d.Message;                     // (String) Nullable, message that explains the error in wasSuccessful.
+			let wasSuccessful = serverResponse.d.WasSuccessful;         // (Boolean) If false, the server detected some kind of error with the operation.
+
+			//This code is for example purposes, your final code though should be similar to this.
+			let test = "";  //needed for the alert()
+
+			//In this case the Data is a List of all Sessions, so for loop over the sessions and for this example return their full status.
+			for (i = 0; i < data.length; i++)
+			{
+				test += data[i].Name + "        " + data[i].IsFull + "\n";
+				//You could grab all of the individual data fields here if you wish, not just IsFull.
+			}
+
+      alert(test);
+      
+      var email = window.localStorage.getItem("email");
+      var pw = window.localStorage.getItem("password");
+
+      alert(email + ":" + pw);
+		}
+	});
+    }
   </script>
 </body>
 
