@@ -22,7 +22,7 @@
         While not everyone will get their top choice, we will do our best to
         match you with a session of interest to you. Please review the sessions
         below and rank your top three choices from 1 to 3, with 1 being your
-        first choice and 3 being your 3rd choice. </p>
+        first choice and 3 being your 3rd choice.<br /> </p>
     </div>
 
     <img class="icons" align="left" src="../img/briefcase.png" alt="">
@@ -34,7 +34,7 @@
         <input type="checkbox" name='session' id="22">
         <span class="checkmark"></span>
       </label>
-      <p>Students will discuss the future of work, including artificial intelligence.</p>
+      <p>Students will discuss the future of work, including artificial intelligence.<br /><br /><strong>&#10070;</strong> UC 330</p>
     </div>
 
     <div>
@@ -49,7 +49,7 @@
       transition into college. A 2012 study examined the top stressors college
       students face, and found that four of the top five stressors were all
       related to finances. In this session students will begin brainstorming
-      their path to financial fitness.</p>
+      their path to financial fitness.<br /><br /><strong>&#10070;</strong> UC 225</p>
     </div>
     <br>
 
@@ -66,7 +66,7 @@
       and ending conversations, making small talk, and learning to read the
       reactions from others during your conversations with them. Explore some
       basic human motivations and messaging behaviors to develop skills in a
-      number of conversational moves.</p>
+      number of conversational moves.<br /><br /><strong>&#10070;</strong> UC 326</p>
     </div>
 
     <div>
@@ -80,7 +80,7 @@
       students through a warm up into full dancing, then observing/learning how
       dances are made. Taking place in our beautiful dance studio, students
       should be prepared to remove their shoes and wear clothes they are
-      comfortable to move in. No prior experience necessary.</p>
+      comfortable to move in. No prior experience necessary.<br /><br /><strong>&#10070;</strong> PARTV 005</p>
     </div>
 
     <div>
@@ -91,7 +91,7 @@
       </label>
       <p>Through hands-on activities, students will learn basic language-decoding
       and will experience how an understanding of linguistics enhances our
-      understanding and appreciation of the world around us.</p>
+      understanding and appreciation of the world around us.<br /><br /><strong>&#10070;</strong> UC 327</p>
     </div>
     <br>
 
@@ -108,7 +108,7 @@
       <p> In this active learning presentation, students are provided a brief
       overview of climate policy to date. Students emulate particular
       perspectives to understand why the U.S., once an environmental leader,
-      lags behind.</p>
+      lags behind.<br /><br /><strong>&#10070;</strong> UC 331</p>
     </div>
 
     <div>
@@ -122,7 +122,7 @@
       project. Join Germaine White as she discusses her work with the
       Confederated Salish and Kootenai Tribes with NASA’s support to create an
       online platform for Native students to study and share knowledge about
-      climate change.</p>
+      climate change.<br /><br /><strong>&#10070;</strong> UC 329</p>
     </div>
     <br>
 
@@ -140,7 +140,7 @@
       application. This interactive workshop builds on new historical and
       social research to give participants conceptual tools to speak with
       sophistication and nuance about the reality of race in the United States
-      and how it has come to be such a powerful force.</p>
+      and how it has come to be such a powerful force.<br /><br /><strong>&#10070;</strong> UC 333</p>
     </div>
     <br>
 
@@ -158,7 +158,7 @@
       led by award-winning UM faculty and Forensic Anthropologist Garry Kerr. Kerr
       has been awarded "Best Professor" in the Missoulian, the Independent, and
       the Kaimin for 30 years and continues to work with local law enforcement on
-      various cases.</p>
+      various cases.<br /><br /><strong>&#10070;</strong> Social Science 356</p>
     </div>
 
     <div>
@@ -172,7 +172,7 @@
       a vinyl sticker. Once you have these skills you can transform just about
       any idea into an image, and stickers can become a way to personally
       amplify your voice and brand your world. It is powerful communication,
-      while also being quick and fun.</p>
+      while also being quick and fun.<br /><br /><strong>&#10070;</strong> Innovation Factory: UC 250</p>
     </div>
 
     <div>
@@ -186,7 +186,7 @@
       implement, and play games they create. It will also include demos of
       current student work and introduce opportunities for incoming students
       through scholarships and as participants in the University of Montana
-      eSports team.</p>
+      eSports team.<br /><br /><strong>&#10070;</strong> eSports Facility:  Mansfield Library Level 1</p>
     </div>
     <br>
 
@@ -201,7 +201,7 @@
       <p>In this session students will have the opportunity to explore UM’s beautiful
       campus with an expert – one of UM’s Student Advocates. Learn all about UM’s
       academics, extracurriculars, and traditions through the eyes of a current UM
-      undergraduate student. </p>
+      undergraduate student.<br /><br /><strong>&#10070;</strong> UC Theater</p>
     </div>
   </div>
 
@@ -218,12 +218,12 @@
     </div>
   </div>
   <br />
-  
+
   <script type="text/javascript" src="../js/jquery.js"></script>
   <script type="text/javascript">
   //limit 3 code from Praveen @https://stackoverflow.com/questions/19001844/how-to-limit-the-number-of-selected-checkboxes
-  var threechosen = [];  
- 
+  var threechosen = [];
+
 
     // get all the options chosen from the user
     $(document).ready(function() {
@@ -246,7 +246,7 @@
           {
               threechosen.push(0);
           } // make sure the array has at least three values
-        
+
           $.ajax({
                 url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/insertStudentSession",
                 type: "post",
@@ -278,7 +278,7 @@
 		success: function (serverResponse) {
 			//I have decided to use a DataPackage object for all server-side output containing these three things.
 			//Keep this in all ajax functions.
-			
+
 			let data = serverResponse.d.Data;                           // (JSON Object) Nullable, if you are expecting data from the database or server it can be found here.  See Database ppl for specifics.
 			let message = serverResponse.d.Message;                     // (String) Nullable, message that explains the error in wasSuccessful.
 			let wasSuccessful = serverResponse.d.WasSuccessful;         // (Boolean) If false, the server detected some kind of error with the operation.
@@ -294,8 +294,8 @@
 			}
 
       //alert(test);
-      
-      
+
+
       //alert(email + ":" + pw);
 		}
 	});

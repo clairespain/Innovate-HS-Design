@@ -20,7 +20,7 @@
             }
             window.localStorage.setItem("email", em);
             window.localStorage.setItem("password", pw);
-            
+
             $.ajax({
                 url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/insertStudent",
                 type: "post",
@@ -32,7 +32,7 @@
                     window.location = "topics.html";
                 },
                 error: function(data, textStatus, jqXHR) {
-                   
+
                 }
             });
         });
@@ -62,7 +62,7 @@
         <p><strong>Please enter your information</strong></p>
         <br><br>
 
-        <label>First Name</label>
+        <label>First Name <br /><font size="1">(preferred)</font></label>
         <input class="stdInfo" type="text" id="firstname" required>
         <br>
         <label>Last Name</label>
