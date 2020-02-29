@@ -98,11 +98,12 @@ i{
 }
 
 .grid-container-topics {
+  justify-content: center;
   display: grid;
   grid-template-columns: repeat(3, auto);
   margin-left: 1em;
   margin-right: 1em;
-  grid-gap: 5px;
+  grid-gap: 10%;
 
 }
 .blocks-topics {
@@ -124,8 +125,8 @@ i{
   margin-right: 5px;
 }
 
-.blocks-topics:hover{
-  background: grey;
+.blocks-topics{
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .3);
 }
 
 .blocks {
@@ -274,6 +275,45 @@ i{
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.topics p{
+  font-family: Arial;
+  color: #707070;
+  font-size: 14px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.container.topics{
+  position: static;
+  display: block;
+  margin:0;
+}
+
+.topics .checkmark{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.container.topics input:checked~.checkmark {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .7);
+}
+
+.container.topics:hover input~.checkmark {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.topics .checkmark:after{
+  top: 70px;
+  left: 43px;
+  width: 7px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
 }
 
 .faculty .icons {
