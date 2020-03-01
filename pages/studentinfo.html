@@ -8,16 +8,72 @@
 <script type="text/javascript">
     // function sendAndReturn() {
     $(document).ready(function() {
+        var email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+        $("#firstname").blur(function() {
+            if ($("#firstname").val() != "") {
+                $("#firstname").css("background-color", "white");
+                $("#firstname").css("color", "black");
+            }
+        });
+
+        $("#lastname").blur(function() {
+            if ($("#lastname").val() != "") {
+                $("#lastname").css("background-color", "white");
+                $("#lastname").css("color", "black");
+            }
+        });
+
+        $("#email").blur(function() {
+            if ($("#email").val() != "" && email_regex.test($("#email").val())) {
+                $("#email").css("background-color", "white");
+                $("#email").css("color", "black");
+            }
+
+        });
+
+        $("#password").blur(function() {
+            if ($("#password").val() != "") {
+                $("#password").css("background-color", "white");
+                $("#password").css("color", "black");
+            }
+        });
+
         $("#btnsubmit").click(function() {
             var fn = $("#firstname").val();
             var lname = $("#lastname").val();
             var em = $("#email").val();
             var pw = $("#password").val();
-            if(fn == "" || lname == "" || em == "" || pw == "")
-            {
-                alert("Please fill in all fields");
+
+            if (fn == "") {
+                $("#firstname").css("background-color", "#800000");
+                $("#firstname").css("color", "#ffffff");
                 return false;
             }
+
+            if (lname == "") {
+                $("#lastname").css("background-color", "#800000");
+                $("#lastname").css("color", "#ffffff");
+                return false;
+            }
+
+            if (em == "") {
+                $("#email").css("background-color", "#800000");
+                $("#email").css("color", "#ffffff");
+                return false;
+            }
+            if (!email_regex.test(em)) {
+                $("#email").css("background-color", "#800000");
+                $("#email").css("color", "#ffffff");
+                return false;
+            }
+            if (pw == "") {
+                $("#password").css("background-color", "#800000");
+                $("#password").css("color", "#ffffff");
+                return false;
+            }
+
+
+
             window.localStorage.setItem("email", em);
             window.localStorage.setItem("password", pw);
 

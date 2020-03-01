@@ -1,33 +1,74 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<link rel="stylesheet" type="text/css" href="../css/innovate.css">
-	</head>
-	<script type="text/javascript" src="../js/jquery.js"></script>
-	<script type = "text/javascript">
-     $(document).ready(function() {
-        $("#btnsubmit").click(function() {
-           
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/innovate.css">
+</head>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+        $("#email").blur(function() {
+            if ($("#email").val() != "" && email_regex.test($("#email").val())) {
+                $("#email").css("background-color", "white");
+                $("#email").css("color", "black");
+            }
 
-            var em = $("#email").val();
-            var pw = $("#password").val();
+        });
+
+        $("#password").blur(function() {
+            if ($("#password").val() != "") {
+                $("#password").css("background-color", "white");
+                $("#password").css("color", "black");
+            }
+        });
+
+        $("#btnsubmit").click(function() {
+
+
+            var em = $("#email").val().trim();
+            var pw = $("#password").val().trim();
+            if (!email_regex.test(em)) {
+                $("#email").css("background-color", "#800000");
+                $("#email").css("color", "#ffffff");
+                return false;
+            }
+            if (pw == "") {
+                $("#password").css("background-color", "#800000");
+                $("#password").css("color", "#ffffff");
+                return false;
+            }
+
+            // alert(em + ":" + pw);
             $.ajax({
-                url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/insertStudent",
+                url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/loginStudent",
                 type: "post",
                 dataType: "json",
                 contentType: "application/json",
-                data: '{"email: "' + em + '", password: "' + pw + '"}',
+                data: '{email: "' + em + '", password: "' + pw + '"}',
+                //data: '{email: "bobD@gmail.com", password: "moo123"}',
                 async: false,
                 success: function(serverResponse) {
                     // alert("Success!");
-					// check for the response to see if it's valid
-					window.localStorage.setItem("email", em);
-           			window.localStorage.setItem("password", pw);
-                    window.location = "questions.html";
+                    // check for the response to see if it's valid
+                    window.localStorage.setItem("email", em);
+                    window.localStorage.setItem("password", pw);
+                    // console.log(serverResponse.d);
+                    if (serverResponse.d.WasSuccessful == false) {
+                        $("#message").text("Incorrect username/password combination.");
+                        $("#message").css("color", "#800000")
+                    }
+                    if (serverResponse.d.WasSuccessful && serverResponse.d.Data.RegistrationComplete == false) {
+                        window.location = "topics.html";
+                    } else if (serverResponse.d.WasSuccessful && serverResponse.d.Data.RegistrationComplete == true) {
+                        window.location = "schedule.html";
+                    }
+                    //window.location = "questions.html";
                 },
                 error: function(data, textStatus, jqXHR) {
-                    //alert("bad" + textStatus + ":" + jqXHR.responseText);
+                    //console.log(em + ":" + pw);
+                    //console.log("message: " + jqXHR);
+                    // alert("bad" + textStatus + ":" + jqXHR.responseText);
                 }
             });
         });
@@ -48,36 +89,38 @@
             return false;
         }
     }
-    </script>
-	<body>
-		<div class="center">
+</script>
 
-			<img src="../img/infoIcon.jpg" alt="info" height="auto" width="300">
-			<br><br>
-			<span id="message"></span>
-			<label>Email</label>
-			<input class="stdInfo" type="text" runat = "server" id="email" required>
-			<br>
-			<label>Password</label>
-			<input class="stdInfo" type="password" runat = "server" id="password" required>
-		
-		<br><br>
+<body>
+    <div class="center">
 
-		<div class="pagination-center">
-			<div class="pagination" >
-		  	<!-- <a href="#">&laquo;</a>
+        <img src="../img/infoIcon.jpg" alt="info" height="auto" width="300">
+        <br><br>
+        <span id="message"></span><br><br>
+        <label>Email</label>
+        <input class="stdInfo" type="text" runat="server" id="email" required>
+        <br>
+        <label>Password</label>
+        <input class="stdInfo" type="password" runat="server" id="password" required>
+
+        <br><br>
+
+        <div class="pagination-center">
+            <div class="pagination">
+                <!-- <a href="#">&laquo;</a>
 		  	<a href="../pages/studentInfo.html"><span class="dot"></span></a>
 		  	<a href = "javascript: sendAndReturn()"><span class="dot"></span></a>
 		  	<a href="../pages/faculty.html"><span class="dot"></span></a>
 		  	<a href="../pages/questions.html"><span class="dot"></span></a>
 		  	<a href="../pages/completeRegistration.html"><span class="dot"></span></a>
 		  	<a href="../pages/.html">&raquo;</a> -->
-				<button id="btnsubmit">Login</button>
-			</div>
-		</div>
-		<br />
-		<p>Don't have an account? <a href="../pages/studentinfo.html">Register</a></p>
-		</div>
+                <button id="btnsubmit">Login</button>
+            </div>
+        </div>
+        <br />
+        <p>Don't have an account? <a href="../pages/studentinfo.html">Register</a></p>
+    </div>
 
-	</body>
+</body>
+
 </html>
