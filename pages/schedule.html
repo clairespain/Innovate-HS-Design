@@ -1,68 +1,105 @@
 <!DOCTYPE html>
+
 <head>
-  <!--meta-->
-  <meta charset="utf-8">
-  <title>InnovateHS Schedule</title>
-  <meta name="author" content="Miya Fordah">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--meta-->
+    <meta charset="utf-8">
+    <title>InnovateHS Schedule</title>
+    <meta name="author" content="Miya Fordah">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!--style-->
-  <link rel="stylesheet" href="../css/scheduleStyle.css">
-
+    <!--style-->
+    <link rel="stylesheet" href="../css/scheduleStyle.css">
 </head>
+
 <body>
-  <div class="main">
-    <!--header-->
-    <!--top arrow-->
+    <div class="main">
+        <!--header-->
+        <!--top arrow-->
+        <br />
+        <a href="resources.html"><i class="arrow left"></i></a>
+        <div class="header">
+            <img>
+        </div>
+
+        <!--schedule-->
+        <div class="schedule" id="arrival">
+            9:30 - 9:45 am <br /><br /> Arrive at the University Center
+        </div>
+
+        <div class="schedule" id="whyIHS">
+            10:00 - 10:45 am <br /><br /> Setting the Stage: Why InnovateHS
+            <p class="description" id="SettingTheStage">
+                <ul class="description">
+                    <li>Welcome by UM President <a href="speakers.html#bodnar">Seth Bodnar</a></li>
+                    <li>Keynote Speaker <a href="speakers.html#miller">Ms. Karen Miller<a/>, Director of BillingsWorks</li>
+          <li>Discussing the Day’s Activities by <a href="speakers.html#phear">Dr. Nicky Phear</a></li>
+                </ul>
+                <p>
+        </div>
+
+        <div class="schedule" id="transition">
+            10:45 - 11:00 am <br /><br /> Transition to Faculty Sessions (Directed by UM Guides)
+        </div>
+
+        <div class="schedule" id="facultySession">
+            11:00 - 11:45 am <br /><br /> Faculty Session <br />
+            <span class="description" id="facultySessionDesc">...
+                </span>
+        </div>
+
+        <div class="schedule" id="lunch">
+            11:45 - 12:40 am <br />
+            <p class="description">
+                Students will be escorted to lunch by UM student guides, provided free meals, and then are free to return to the UC Ballroom on their own for the final session.
+                <p>
+        </div>
+
+        <div class="schedule" id="innovationInAction">
+            12:45 - 1:55 pm <br /><br /> Innovation in Action, led by Dr. Phear in the UC Ballroom
+        </div>
+
+        <div class="schedule" id="bus">
+            1:55 pm <br /><br /> Transition to bus loading area outside UC and depart
+        </div>
+    </div>
+    <!--bottom arrow-->
     <br />
     <a href="resources.html"><i class="arrow left"></i></a>
-    <div class="header">
-      <img>
-    </div>
 
-    <!--schedule-->
-    <div class="schedule" id="arrival">
-      9:30 - 9:45 am <br /><br /> Arrive at the University Center
-    </div>
+    <script src="../js/scheduleScript.js"></script>
 
-    <div class="schedule" id="whyIHS">
-      10:00 - 10:45 am <br /><br /> Setting the Stage: Why InnovateHS
-      <p class="description" id="facultySessionDesc">
-        <ul class="description">
-          <li>Welcome by UM President <a href="speakers.html#bodnar">Seth Bodnar</a></li>
-          <li>Keynote Speaker <a href="speakers.html#miller">Ms. Karen Miller<a/>, Director of BillingsWorks</li>
-          <li>Discussing the Day’s Activities by <a href="speakers.html#phear">Dr. Nicky Phear</a></li>
-        </ul>
-      <p>
-    </div>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
 
-    <div class="schedule" id="transition">
-      10:45 - 11:00 am <br /><br /> Transition to Faculty Sessions (Directed by UM Guides)
-    </div>
+            var email = window.localStorage.getItem("email");
+            var pw = window.localStorage.getItem("password");
 
-    <div class="schedule" id="facultySession">
-      11:00 - 11:45 am <br /><br /> Faculty Session <br />
-      <p class="description" id="facultySessionDesc">...<p>
-    </div>
+            $.ajax({
+                url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/retrieveStudentSession",
+                type: "post",
+                dataType: "json",
+                contentType: "application/json",
+                data: '{email: "' + email + '", password: "' + pw + '"}',
+                async: false,
+                success: function(serverResponse) {
+                    let data = serverResponse.d.Data;
+                    console.log(data);
+                    let name = data.Name;
+                    let description = data.Description;
+                    let speaker = data.SpeakerName;
+                    let room = data.Room;
+                    let building = data.Building;
+                    let finalInfo = "<br><b>" + name + "</b><p>" + description + "<p>" +
+                        speaker + "<br>" + building + " " + room;
+                    $("#facultySessionDesc").html(finalInfo);
 
-    <div class="schedule" id="lunch">
-      11:45 - 12:40 am <br />
-      <p class="description">
-        Students will be escorted to lunch by UM student guides, provided free meals, and then are free to return to the UC Ballroom on their own for the final session.
-      <p>
-    </div>
+                },
+                error: function(data, textStatus, jqXHR) {
 
-    <div class="schedule" id="innovationInAction">
-      12:45 - 1:55 pm <br /><br /> Innovation in Action, led by Dr. Phear in the UC Ballroom
-    </div>
+                }
+            });
 
-    <div class="schedule" id="bus">
-      1:55 pm <br /><br /> Transition to bus loading area outside UC and depart
-    </div>
-  </div>
-  <!--bottom arrow-->
-  <br />
-  <a href="resources.html"><i class="arrow left"></i></a>
-
-  <script src="../js/scheduleScript.js"></script>
+        }); // end onready
+    </script>
 </body>
