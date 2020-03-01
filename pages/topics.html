@@ -21,7 +21,7 @@
                 if ($('input[type=checkbox]:checked').length > 2) {
                     $(this).prop('checked', false);
                 } else {
-                    var value = $(this).attr('id'); // grab value of original
+                    var value = $(this).attr('value'); // grab value of original
                     twochosen.push(value);
                 }
             });
