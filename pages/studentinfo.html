@@ -89,7 +89,13 @@
                 data: '{firstName: "' + fn + '", lastName: "' + lname + '", email: "' + em + '", password: "' + pw + '", school: null}',
                 async: false,
                 success: function(serverResponse) {
-                    window.location = "topics.html";
+                    console.log(serverResponse.d);
+                    if (serverResponse.d.WasSuccessful) {
+                        window.location = "topics.html";
+                    } else {
+                        $("#message").text(serverResponse.d.Message);
+                    }
+
                 },
                 error: function(data, textStatus, jqXHR) {
 
@@ -121,7 +127,8 @@
         <img src="../img/questions.svg" alt="info" height="auto" width="300">
         <p><strong>Please enter your information</strong></p>
         <br><br>
-
+        <span id="message" style="color:red"></span>
+        <br><br>
         <label>First Name <br /><font size="1">(preferred)</font></label>
         <input class="stdInfo" type="text" id="firstname" required>
         <br>
