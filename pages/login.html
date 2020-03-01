@@ -7,7 +7,9 @@
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
+        // this is the regular expression that checks for a valid email -- this came from online source
         var email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+        // this is the blur functions that checks after the user leaves the text box
         $("#email").blur(function() {
             if ($("#email").val() != "" && email_regex.test($("#email").val())) {
                 $("#email").css("background-color", "white");
@@ -28,6 +30,13 @@
 
             var em = $("#email").val().trim();
             var pw = $("#password").val().trim();
+
+            // these if statements are just checking if the email was entered, was valid and if the password was entered          
+            if (em == "") {
+                $("#email").css("background-color", "#800000");
+                $("#email").css("color", "#ffffff");
+                return false;
+            }
             if (!email_regex.test(em)) {
                 $("#email").css("background-color", "#800000");
                 $("#email").css("color", "#ffffff");
@@ -39,27 +48,27 @@
                 return false;
             }
 
-            // alert(em + ":" + pw);
+            // this is where the main call to the server happens
             $.ajax({
                 url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/loginStudent",
                 type: "post",
                 dataType: "json",
                 contentType: "application/json",
                 data: '{email: "' + em + '", password: "' + pw + '"}',
-                //data: '{email: "bobD@gmail.com", password: "moo123"}',
                 async: false,
                 success: function(serverResponse) {
-                    // alert("Success!");
                     // check for the response to see if it's valid
                     window.localStorage.setItem("email", em);
                     window.localStorage.setItem("password", pw);
-                    // console.log(serverResponse.d);
+                    // this is the response that comes back from the server, check to see if they entered a valid login combination
                     if (serverResponse.d.WasSuccessful == false) {
                         $("#message").text("Incorrect username/password combination.");
                         $("#message").css("color", "#800000")
                     }
+                    // this will take them to the first page after registration if they haven't completed registration
                     if (serverResponse.d.WasSuccessful && serverResponse.d.Data.RegistrationComplete == false) {
                         window.location = "topics.html";
+                        // this will take you to the main page if they are done registering
                     } else if (serverResponse.d.WasSuccessful && serverResponse.d.Data.RegistrationComplete == true) {
                         window.location = "resources.html";
                     }

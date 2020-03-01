@@ -22,6 +22,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).ready(function() {
+        // this submit click gets all the values and sends them to the server
         $("#btnsubmit").click(function() {
             var problem1 = $("#problem1").val();
             var problem2 = $("#problem2").val();
@@ -41,22 +42,16 @@
                     window.location = "completeRegistration.html";
                 },
                 error: function(data, textStatus, jqXHR) {
-                    //alert("bad" + textStatus + ":" + jqXHR.responseText);
+
                 }
             });
         });
     });
-
-    function getInfo() {
-        //var email = window.localStorage.getItem("email");
-        //var pw = window.localStorage.getItem("password");
-        //alert(email + ":" + pw);
-    }
 </script>
 
 
 
-<body onload="getInfo();">
+<body>
 
     <div class="center">
 

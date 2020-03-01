@@ -4,59 +4,53 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="author" content="Claire Spain">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/myStyle.css">
-<script type="text/javascript" src="../js/jquery.js"></script>
+    <meta charset="utf-8">
+    <meta name="author" content="Claire Spain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/myStyle.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
 
 
-<script type="text/javascript">
+    <script type="text/javascript">
+        var twochosen = [];
 
-var twochosen = [];
+        $(document).ready(function() {
 
-    // function sendAndReturn() {
-    $(document).ready(function() {
-
-      $('input[type=checkbox]').on('change', function (e) {
-      if ($('input[type=checkbox]:checked').length > 2) {
-        $(this).prop('checked', false);
-      }
-      else
-      {
-        var value = $(this).attr('id'); // grab value of original
-        twochosen.push(value);
-      }
-    });
-
-        $("#btnsubmit").click(function() {
-          var email = window.localStorage.getItem("email");
-          var pw = window.localStorage.getItem("password");
-          while(twochosen.length < 2)
-          {
-              twochosen.push("");
-          } // make sure the array has at least three values
-            $.ajax({
-                url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/chooseTopics",
-                type: "post",
-                dataType: "json",
-                contentType: "application/json",
-                data: '{email: "'+ email +'", password: "'+ pw +'", choiceOneName: "'+ twochosen[0]+'", choiceTwoName: "'+ twochosen[1]+'"}',
-                async: false,
-                success: function(serverResponse) {
-                    // alert("Success!");
-                    window.location = "faculty.html";
-                },
-                error: function(data, textStatus, jqXHR) {
-                    //alert("bad" + textStatus + ":" + jqXHR.responseText);
+            // this ensures only 2 items are chosen
+            $('input[type=checkbox]').on('change', function(e) {
+                if ($('input[type=checkbox]:checked').length > 2) {
+                    $(this).prop('checked', false);
+                } else {
+                    var value = $(this).attr('id'); // grab value of original
+                    twochosen.push(value);
                 }
             });
-        });
-    });
 
-  </script>
-  <title>Topics</title>
-  <!-- TODO: Change checkboxes to be invisible -->
+            $("#btnsubmit").click(function() {
+                var email = window.localStorage.getItem("email");
+                var pw = window.localStorage.getItem("password");
+                while (twochosen.length < 2) {
+                    twochosen.push("");
+                } // make sure the array has at least two values
+                $.ajax({
+                    url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/chooseTopics",
+                    type: "post",
+                    dataType: "json",
+                    contentType: "application/json",
+                    data: '{email: "' + email + '", password: "' + pw + '", choiceOneName: "' + twochosen[0] + '", choiceTwoName: "' + twochosen[1] + '"}',
+                    async: false,
+                    success: function(serverResponse) {
+                        window.location = "faculty.html";
+                    },
+                    error: function(data, textStatus, jqXHR) {
+
+                    }
+                });
+            });
+        });
+    </script>
+    <title>Topics</title>
+    <!-- TODO: Change checkboxes to be invisible -->
 </head>
 
 
@@ -65,30 +59,27 @@ var twochosen = [];
 
 <div id="myResponse"></div>
 <div class="">
-  <img class="header-logo-post" src="..\img\checklist.svg" alt="">
+    <img class="header-logo-post" src="..\img\checklist.svg" alt="">
 </div>
 <div class="topics">
-  <p>We want you to know what topics interest you the most. Please review the
-    sessions below and select your top two choices. Based on your choices, we will
-    assign you to an activity where you’ll work in small groups to solve a
-    problem in this area.</p>
+    <p>We want you to know what topics interest you the most. Please review the sessions below and select your top two choices. Based on your choices, we will assign you to an activity where you’ll work in small groups to solve a problem in this area.</p>
 </div>
 <br>
 
 
 <div class="grid-container-topics">
 
-  <div class="blocks-topics">
-    <label class="container topics">
+    <div class="blocks-topics">
+        <label class="container topics">
       <h5>Business
       <br>& Entrepreneurship</h5>
       <input type="checkbox" name="myCheckboxes" id="myCheckbox1" value="Business and Entrepreneurship" />
       <span class="checkmark"></span>
     </label>
-  </div>
+    </div>
 
-  <div class="blocks-topics">
-    <label class="container topics">
+    <div class="blocks-topics">
+        <label class="container topics">
       <h5>Communication
       <br>& Artistic Expression</h5>
       <input type="checkbox" name="myCheckboxes" id="myCheckbox3" value="Communication and Artistic Expression" />
@@ -104,50 +95,50 @@ var twochosen = [];
       <input type="checkbox" name="myCheckboxes" id="myCheckbox2" value="Environment and Sustainability" />
       <span class="checkmark"></span>
     </label>
-  </div>
+    </div>
 
-  <div class="blocks-topics">
-    <label class="container topics">
+    <div class="blocks-topics">
+        <label class="container topics">
       <h5> Explore UM
       <br><br>
       <br> </h5>
       <input type="checkbox" name="myCheckboxes" id="myCheckbox4" value="Exploring UM" />
       <span class="checkmark"></span>
     </label>
-  </div>
+    </div>
 
-  <div class="blocks-topics">
-    <label class="container topics">
+    <div class="blocks-topics">
+        <label class="container topics">
       <h5>Science
       <br>&
       <br>Technology</h5>
       <input type="checkbox" name="myCheckboxes" id="myCheckbox5" value="Science and Technology" />
       <span class="checkmark"></span>
     </label>
-  </div>
+    </div>
 
-  <div class="blocks-topics">
-    <label class="container topics">
+    <div class="blocks-topics">
+        <label class="container topics">
       <h5>Justice, Policy
       <br>&
       <br>Public Service</h5>
       <input type="checkbox" name="myCheckboxes" id="myCheckbox6" value="Justice, Policy and Public Service" />
       <span class="checkmark"></span>
     </label>
-  </div>
+    </div>
 </div>
 <br><br>
 <div class="pagination-center">
-  <div class="pagination footer" >
-    <!-- <a href="#">&laquo;</a>
+    <div class="pagination footer">
+        <!-- <a href="#">&laquo;</a>
     <a href="../pages/studentInfo.html"><span class="dot"></span></a>
     <a href="../pages/topics.html"><span class="dot"></span></a>
     <a href="../pages/faculty.html"><span class="dot"></span></a>
     <a href="../pages/questions.html"><span class="dot"></span></a>
     <a href="../pages/completeRegistration.html"><span class="dot"></span></a>
     <a href="../pages/.html">&raquo;</a> -->
-    <button id="btnsubmit">Submit</button>
-  </div>
+        <button id="btnsubmit">Submit</button>
+    </div>
 </div>
 </body>
 

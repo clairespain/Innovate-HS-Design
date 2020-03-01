@@ -6,9 +6,10 @@
 </head>
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript">
-    // function sendAndReturn() {
     $(document).ready(function() {
+        // regular expression for email - again from from online source
         var email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+        // blur functions to check if they really fixed the issues return everything back to normal if they did
         $("#firstname").blur(function() {
             if ($("#firstname").val() != "") {
                 $("#firstname").css("background-color", "white");
@@ -39,14 +40,16 @@
         });
 
         $("#btnsubmit").click(function() {
+            // this gets the information from the textboxes
             var fn = $("#firstname").val();
             var lname = $("#lastname").val();
             var em = $("#email").val();
             var pw = $("#password").val();
-
+            // these check to see if everything has been entered and are valid
             if (fn == "") {
                 $("#firstname").css("background-color", "#800000");
                 $("#firstname").css("color", "#ffffff");
+                // this return false prevents the user from continuing while this error condition exists
                 return false;
             }
 
@@ -73,10 +76,11 @@
             }
 
 
-
+            // want to store the email and password in local storage so that we know who it is on each page
             window.localStorage.setItem("email", em);
             window.localStorage.setItem("password", pw);
 
+            // send everything to the server
             $.ajax({
                 url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/insertStudent",
                 type: "post",
