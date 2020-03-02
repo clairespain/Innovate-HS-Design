@@ -22,10 +22,10 @@
                     $(this).prop('checked', false);
                 } else {
                     var value = $(this).attr('value'); // grab value of original
-                    // alert(value);
+
                     var id = $(this).attr('id');
                     if (!$('#' + id).is(":checked")) {
-                        //alert("HI");
+
                         var index = twochosen.indexOf(value);
                         twochosen.splice(index, 1);
                     } else {
