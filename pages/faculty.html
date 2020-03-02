@@ -15,7 +15,13 @@
     <div class="header-faculty">
         <img src="../img/teaching.svg" alt="">
     </div>
+
     <div class="faculty dropdown">
+
+        <h4 id="message">
+            <p><br /> </p>
+        </h4>
+
         <!-- TODO: Align icons, set checkmarks for 1,2,3 -->
         <div class="info">
             <p>We want you to choose the small group faculty sessions you plan to attend. While not everyone will get their top choice, we will do our best to match you with a session of interest to you. Please review the sessions below and select your top
@@ -192,14 +198,16 @@
         $(document).ready(function() {
 
             $('input[type=checkbox]').on('change', function(e) {
+
                 if ($('input[type=checkbox]:checked').length > 3) {
                     $(this).prop('checked', false);
                 } else {
                     var value = $(this).attr('id'); // grab value of original
 
-                    if ($('#' + value).attr('checked')) {
-                        alert("test" + value);
-                        threechosen.splice(value, 1);
+                    if (!$('#' + value).is(":checked")) {
+                        // alert("test" + value);
+                        var index = threechosen.indexOf(value);
+                        threechosen.splice(index, 1);
                     } else {
                         threechosen.push(value);
                     }
@@ -223,7 +231,12 @@
                     async: false,
                     success: function(serverResponse) {
                         // alert("Success!");
-                        window.location = "questions.html";
+                        if (serverResponse.d.WasSuccessful) {
+                            window.location = "questions.html";
+                        } else {
+                            $("#message").html(serverResponse.d.Message);
+                        }
+
                     },
                     error: function(data, textStatus, jqXHR) {
                         //alert("bad" + textStatus + ":" + jqXHR.responseText);

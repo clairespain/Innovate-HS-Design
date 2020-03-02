@@ -22,7 +22,15 @@
                     $(this).prop('checked', false);
                 } else {
                     var value = $(this).attr('value'); // grab value of original
-                    twochosen.push(value);
+                    // alert(value);
+                    var id = $(this).attr('id');
+                    if (!$('#' + id).is(":checked")) {
+                        //alert("HI");
+                        var index = twochosen.indexOf(value);
+                        twochosen.splice(index, 1);
+                    } else {
+                        twochosen.push(value);
+                    }
                 }
             });
 
@@ -73,7 +81,7 @@
         <label class="container topics">
       <h5>Business
       <br>& Entrepreneurship</h5>
-      <input type="checkbox" name="myCheckboxes" id="myCheckbox1" value="Business and Entrepreneurship" />
+      <input type="checkbox" name="myCheckboxes" id="checkbox1" value="Business and Entrepreneurship" />
       <span class="checkmark"></span>
     </label>
     </div>
@@ -82,7 +90,7 @@
         <label class="container topics">
       <h5>Communication
       <br>& Artistic Expression</h5>
-      <input type="checkbox" name="myCheckboxes" id="myCheckbox3" value="Communication and Artistic Expression" />
+      <input type="checkbox" name="myCheckboxes" id="checkbox2" value="Communication and Artistic Expression" />
       <span class="checkmark"></span>
     <label>
   </div>
@@ -92,7 +100,7 @@
       <h5>Environment
       <br>&
       <br>Sustainability</h5>
-      <input type="checkbox" name="myCheckboxes" id="myCheckbox2" value="Environment and Sustainability" />
+      <input type="checkbox" name="myCheckboxes" id="checkbox3" value="Environment and Sustainability" />
       <span class="checkmark"></span>
     </label>
     </div>
@@ -102,7 +110,7 @@
       <h5> Explore UM
       <br><br>
       <br> </h5>
-      <input type="checkbox" name="myCheckboxes" id="myCheckbox4" value="Exploring UM" />
+      <input type="checkbox" name="myCheckboxes" id="checkbox4" value="Exploring UM" />
       <span class="checkmark"></span>
     </label>
     </div>
@@ -112,7 +120,7 @@
       <h5>Science
       <br>&
       <br>Technology</h5>
-      <input type="checkbox" name="myCheckboxes" id="myCheckbox5" value="Science and Technology" />
+      <input type="checkbox" name="myCheckboxes" id="checkbox5" value="Science and Technology" />
       <span class="checkmark"></span>
     </label>
     </div>
@@ -122,7 +130,7 @@
       <h5>Justice, Policy
       <br>&
       <br>Public Service</h5>
-      <input type="checkbox" name="myCheckboxes" id="myCheckbox6" value="Justice, Policy and Public Service" />
+      <input type="checkbox" name="myCheckboxes" id="checkbox6" value="Justice, Policy and Public Service" />
       <span class="checkmark"></span>
     </label>
     </div>
