@@ -11,21 +11,21 @@
         var email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
         // blur functions to check if they really fixed the issues return everything back to normal if they did
         $("#firstname").blur(function() {
-            if ($("#firstname").val() != "") {
+            if ($("#firstname").val().trim() != "") {
                 $("#firstname").css("background-color", "white");
                 $("#firstname").css("color", "black");
             }
         });
 
         $("#lastname").blur(function() {
-            if ($("#lastname").val() != "") {
+            if ($("#lastname").val().trim() != "") {
                 $("#lastname").css("background-color", "white");
                 $("#lastname").css("color", "black");
             }
         });
 
         $("#email").blur(function() {
-            if ($("#email").val() != "" && email_regex.test($("#email").val())) {
+            if ($("#email").val().trim() != "" && email_regex.test($("#email").val().trim())) {
                 $("#email").css("background-color", "white");
                 $("#email").css("color", "black");
             }
@@ -33,7 +33,7 @@
         });
 
         $("#password").blur(function() {
-            if ($("#password").val() != "") {
+            if ($("#password").val().trim() != "") {
                 $("#password").css("background-color", "white");
                 $("#password").css("color", "black");
             }
@@ -41,10 +41,10 @@
 
         $("#btnsubmit").click(function() {
             // this gets the information from the textboxes
-            var fn = $("#firstname").val();
-            var lname = $("#lastname").val();
-            var em = $("#email").val();
-            var pw = $("#password").val();
+            var fn = $("#firstname").val().trim();
+            var lname = $("#lastname").val().trim();
+            var em = $("#email").val().trim();
+            var pw = $("#password").val().trim();
             // these check to see if everything has been entered and are valid
             if (fn == "") {
                 $("#firstname").css("background-color", "#800000");

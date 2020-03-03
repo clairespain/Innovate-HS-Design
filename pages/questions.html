@@ -21,7 +21,16 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
+    history.pushState(null, null, location.href);
+    history.back();
+    history.forward();
+    window.onpopstate = function() {
+        history.go(1);
+    };
     $(document).ready(function() {
+
+
+
         // this submit click gets all the values and sends them to the server
         $("#btnsubmit").click(function() {
             var problem1 = $("#problem1").val();

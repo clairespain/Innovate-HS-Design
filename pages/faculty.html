@@ -259,6 +259,7 @@
                     //Keep this in all ajax functions.
 
                     let data = serverResponse.d.Data; // (JSON Object) Nullable, if you are expecting data from the database or server it can be found here.  See Database ppl for specifics.
+                    //console.log(data);
                     let message = serverResponse.d.Message; // (String) Nullable, message that explains the error in wasSuccessful.
                     let wasSuccessful = serverResponse.d.WasSuccessful; // (Boolean) If false, the server detected some kind of error with the operation.
 
@@ -266,15 +267,16 @@
                     let test = ""; //needed for the alert()
 
                     //In this case the Data is a List of all Sessions, so for loop over the sessions and for this example return their full status.
+
                     for (i = 0; i < data.length; i++) {
-                        test += data[i].Name + "        " + data[i].IsFull + "\n";
+                        // test += data[i].Name + "        " + data[i].IsFull + "\n";
                         //You could grab all of the individual data fields here if you wish, not just IsFull.
+                        if (data[i].IsFull) {
+                            $('#' + data[i].ClassID).prop('disabled', true);
+                            $('#' + data[i].ClassID).after("<h4>SESSION FULL</h4>");
+                        }
                     }
 
-                    //alert(test);
-
-
-                    //alert(email + ":" + pw);
                 }
             });
         }

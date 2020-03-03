@@ -11,7 +11,7 @@
         var email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
         // this is the blur functions that checks after the user leaves the text box
         $("#email").blur(function() {
-            if ($("#email").val() != "" && email_regex.test($("#email").val())) {
+            if ($("#email").val().trim() != "" && email_regex.test($("#email").val().trim())) {
                 $("#email").css("background-color", "white");
                 $("#email").css("color", "black");
             }
@@ -19,7 +19,7 @@
         });
 
         $("#password").blur(function() {
-            if ($("#password").val() != "") {
+            if ($("#password").val().trim() != "") {
                 $("#password").css("background-color", "white");
                 $("#password").css("color", "black");
             }
