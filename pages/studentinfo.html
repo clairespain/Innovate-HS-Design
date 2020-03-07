@@ -6,37 +6,35 @@
 </head>
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript">
-
-    function getSchools()
-    {
+    function getSchools() {
         // get the schools
         $.ajax({
             url: "http://innovatehs.silverleaf-consulting.com/Server.aspx/getOriginalSchools",
             type: "post",
-                dataType: "json",
-                contentType: "application/json",
-                 async: false,
+            dataType: "json",
+            contentType: "application/json",
+            async: false,
 
-            success: function (serverResponse) {
-               // alert("HI");
+            success: function(serverResponse) {
+                // alert("HI");
                 //I have decided to use a DataPackage object for all server-side output containing these three things.
                 //Keep this in all ajax functions.
 
-                let data = serverResponse.d.Data;                           // (JSON Object) Nullable, if you are expecting data from the database or server it can be found here.  See Database ppl for specifics.
-               // let message = serverResponse.d.Message;                     // (String) Nullable, message that explains the error in wasSuccessful.
-               // let wasSuccessful = serverResponse.d.WasSuccessful;         // (Boolean) If false, the server detected some kind of error with the operation.
+                let data = serverResponse.d.Data; // (JSON Object) Nullable, if you are expecting data from the database or server it can be found here.  See Database ppl for specifics.
+                // let message = serverResponse.d.Message;                     // (String) Nullable, message that explains the error in wasSuccessful.
+                // let wasSuccessful = serverResponse.d.WasSuccessful;         // (Boolean) If false, the server detected some kind of error with the operation.
 
                 //This code is for example purposes, your final code though should be similar to this.
-              //  let test = "";  //needed for the alert()
+                //  let test = "";  //needed for the alert()
 
                 //In this case the Data is a List of all Sessions, so for loop over the sessions and for this example return their full status.
-                var select = $("#school"); 
-               
+                var select = $("#school");
+
                 for (i = 0; i < data.length; i++) {
                     var schoolid = data[i].SchoolID;
                     var schoolname = data[i].SchoolName;
-                    select.append('<option value=' + schoolid + '>'+ schoolname + '</option>');
-               //     test += data[i].SchoolID + "\n";
+                    select.append('<option value=' + schoolid + '>' + schoolname + '</option>');
+                    //     test += data[i].SchoolID + "\n";
                     //You could grab all of the individual data fields here if you wish, not just IsFull.
                 }
                 select.append('<option value=-1>Other</option>');
@@ -51,7 +49,7 @@
                     select.appendChild(el);
                 }​*/
 
-               // alert(test);
+                // alert(test);
             },
             error: function(data, textStatus, jqXHR) {
                 //    alert(textStatus);
@@ -61,7 +59,7 @@
     $(document).ready(function() {
 
         getSchools();
-      
+
         // regular expression for email - again from from online source
         var email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
         // blur functions to check if they really fixed the issues return everything back to normal if they did
@@ -80,8 +78,7 @@
         });
 
         $("#school").blur(function() {
-            if($("#school").val() != -2)
-            {
+            if ($("#school").val() != -2) {
                 $("#school").css("background-color", "white");
                 $("#school").css("color", "black");
             }
@@ -102,15 +99,11 @@
             }
         });
 
-        $("#school").on('change',function(e)
-        {
-            if($("#school").val() == -1)
-            {
-                $("#schoolOther").css("visibility","visible");
-            }
-            else
-            {
-                $("#schoolOther").css("visibility","hidden");
+        $("#school").on('change', function(e) {
+            if ($("#school").val() == -1) {
+                $("#schoolOther").css("visibility", "visible");
+            } else {
+                $("#schoolOther").css("visibility", "hidden");
                 $("#schoolOther").val("");
             }
         });
@@ -122,9 +115,9 @@
             var em = $("#email").val().trim();
             var pw = $("#password").val().trim();
             var schoolID = $("#school").val();
-            var schoolName= $("#schoolOther").val().trim();
+            var schoolName = $("#schoolOther").val().trim();
 
-           
+
             // these check to see if everything has been entered and are valid
             if (fn == "") {
                 $("#firstname").css("background-color", "#800000");
@@ -138,9 +131,8 @@
                 $("#lastname").css("color", "#ffffff");
                 return false;
             }
-            if(schoolID == -2)
-            {
-                $("#school").css("background-color","#800000");
+            if (schoolID == -2) {
+                $("#school").css("background-color", "#800000");
                 $("#school").css("color", "#ffffff");
                 return false;
             }
@@ -171,7 +163,7 @@
                 type: "post",
                 dataType: "json",
                 contentType: "application/json",
-                data: '{firstName: "' + fn + '", lastName: "' + lname + '", email: "' + em + '", password: "' + pw + '", schoolID: ' + schoolID + ', otherSchool:"'+ schoolName + '"}',
+                data: '{firstName: "' + fn + '", lastName: "' + lname + '", email: "' + em + '", password: "' + pw + '", schoolID: ' + schoolID + ', otherSchool:"' + schoolName + '"}',
                 async: false,
                 success: function(serverResponse) {
                     console.log(serverResponse.d);

@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; 
+                  style-src * 'self' 'unsafe-inline' 'unsafe-eval'; 
+                  script-src * 'self' 'unsafe-inline' 'unsafe-eval';">
     <link rel="stylesheet" href="./css/myStyle.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Page</title>
@@ -16,10 +19,10 @@
     <div class="welcome">
         <p>Dear Juniors:</p>
 
-        <p>We are excited to welcome you to UM on Tuesday, April 7! We have designed this conference just for you. Mansfield Center: InnovateHS is all about Imagination and Problem Solving. 
+        <p>We are excited to welcome you to UM on Tuesday, April 7! We have designed this conference just for you. Mansfield Center: InnovateHS is all about Imagination and Problem Solving.
         </p>
 
-        <p>The day includes a keynote speaker, small group sessions with UM faculty, lunch, and a final interactive activity. We want to give you a taste for college life while engaging with peers from other high schools. 
+        <p>The day includes a keynote speaker, small group sessions with UM faculty, lunch, and a final interactive activity. We want to give you a taste for college life while engaging with peers from other high schools.
         </p>
     </div>
 
@@ -29,11 +32,15 @@
 
         <p>If you have any questions, email us at -- <a href="mailto:anne.hanson@umontana.edu">anne.hanson@umontana.edu</a></p>
     </div>
-    <div class="pagination-center">    
-            <div class="pagination footer">
-                <a href="./pages/login.html"><button id="btnsubmit">Login</button></a><br><br>
-                <a href="./pages/studentinfo.html"><button id="btnsubmit">Register</button></a>
+    <div class="pagination-center">
+        <div class="pagination footer">
+            <a href="./pages/studentinfo.html"><button id="btnsubmit">Register</button></a><br>
+            <div class="welcome-red">
+                <p> Already registered?</p>
             </div>
+            <a href="./pages/login.html"><button id="btnsubmit">Login</button></a><br>
+
+        </div>
 </body>
 
 </html>
