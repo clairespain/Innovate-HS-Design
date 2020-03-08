@@ -88,10 +88,11 @@
                     let name = data.Name;
                     let description = data.Description;
                     let speaker = data.SpeakerName;
+                    let speakerAffiliation = data.SpeakerAffiliation;
                     let room = data.Room;
                     let building = data.Building;
                     let finalInfo = "<br><b>" + name + "</b><p>" + description + "<p>" +
-                        speaker + "<br>" + building + " " + room;
+                        speaker + ", " + speakerAffiliation + "<br>" + building + " " + room;
                     $("#facultySessionDesc").html(finalInfo);
 
                 },
