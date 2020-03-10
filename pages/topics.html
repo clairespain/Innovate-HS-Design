@@ -48,6 +48,9 @@
                     data: '{email: "' + email + '", password: "' + pw + '", choiceOneName: "' + twochosen[0] + '", choiceTwoName: "' + twochosen[1] + '"}',
                     async: false,
                     success: function(serverResponse) {
+                        //console.log(serverResponse.d.Message);
+                        window.localStorage.setItem("email", email);
+                        window.localStorage.setItem("password", pw);
                         window.location = "faculty.html";
                     },
                     error: function(data, textStatus, jqXHR) {

@@ -242,8 +242,12 @@
                     data: '{email: "' + email + '", password: "' + pw + '", choiceOneID: ' + threechosen[0] + ', choiceTwoID: ' + threechosen[1] + ', choiceThreeID: ' + threechosen[2] + '}',
                     async: false,
                     success: function(serverResponse) {
-                        // alert("Success!");
+                        //alert("Success!");
+                        // alert(threechosen);
                         if (serverResponse.d.WasSuccessful) {
+                            window.localStorage.setItem("email", email);
+                            window.localStorage.setItem("password", pw);
+                            // alert(serverResponse.d.Message);
                             window.location = "questions.html";
                         } else {
                             $("#message").html(serverResponse.d.Message);
